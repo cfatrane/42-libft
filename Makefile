@@ -6,13 +6,14 @@
 #    By: cfatrane <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/04 10:27:57 by cfatrane          #+#    #+#              #
-#    Updated: 2016/11/04 20:45:09 by cfatrane         ###   ########.fr        #
+#    Updated: 2016/11/04 20:54:07 by cfatrane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
 SRC =	ft_bzero.c		\
+		ft_memcpy.c		\
 		ft_strlen.c		\
 		ft_strdup.c		\
 		ft_strcpy.c		\

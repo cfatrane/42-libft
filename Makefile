@@ -6,7 +6,7 @@
 #    By: cfatrane <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/04 10:27:57 by cfatrane          #+#    #+#              #
-#    Updated: 2016/11/04 11:14:14 by cfatrane         ###   ########.fr        #
+#    Updated: 2016/11/04 17:07:03 by cfatrane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,8 @@ SRC =	ft_bzero.c		\
 		ft_strncpy.c	\
 		ft_strcat.c		\
 		ft_strncat.c	\
+		ft_strchr.c		\
+		ft_strrchr.c	\
 		ft_strstr.c		\
 		ft_strnstr.c	\
 		ft_strcmp.c		\

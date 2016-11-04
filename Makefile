@@ -6,7 +6,7 @@
 #    By: cfatrane <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/04 10:27:57 by cfatrane          #+#    #+#              #
-#    Updated: 2016/11/04 17:07:03 by cfatrane         ###   ########.fr        #
+#    Updated: 2016/11/04 19:00:04 by cfatrane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,7 @@ SRC =	ft_bzero.c		\
 		ft_isprint.c	\
 		ft_tolower.c	\
 		ft_toupper.c	\
+		ft_memalloc.c	\
 		ft_putchar.c	\
 		ft_putstr.c		\
 		ft_putnbr.c		\

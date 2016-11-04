@@ -29,3 +29,19 @@ char	*ft_strstr(const char *haystack, const char *needle)
 	}
 	return (NULL);
 }
+/*
+
+	while (i < n && haystack[i])
+	{
+		j = i;
+		k = 0;
+		while (haystack[j] == needle[k] && j < n)
+		{
+			j++;
+			k++;
+			if (needle[k] == '\0')
+				return ((char *)haystack + i);
+		}
+		i++;
+	}
+*/

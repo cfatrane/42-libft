@@ -14,15 +14,12 @@
 
 int	ft_atoi(const char *nptr)
 {
-	int nb;
-	int sign;
+	long int nb;
+	long int sign;
 
 	nb = 0;
 	sign = 1;
-	if (!nptr)
-		return (0);
-	while (*nptr == ' ' || *nptr == '\t' || *nptr == '\n' || *nptr == '\r'
-			|| *nptr == '\v' || *nptr == '\f')
+	while (*nptr >= 127 || *nptr <= 32)
 		nptr++;
 	if (*nptr == '+' || *nptr == '-')
 	{

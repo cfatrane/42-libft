@@ -30,10 +30,10 @@ int	ft_atoi(const char *nptr)
 			sign = (-1);
 		nptr++;
 	}
-	while (ft_isdigit(int)*str)
+	while (ft_isdigit((int)*nptr))
 	{
 		nb = nb * 10 + *nptr - '0';
-		nptr+;
+		nptr++;
 	}
 	return (sign * nb);
 }

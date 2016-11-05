@@ -47,7 +47,6 @@ SRC =	ft_memset.c		\
 		ft_strnequ.c	\
 		ft_strsub.c		\
 		ft_strjoin.c	\
-		ft_strtrim.c	\
 		ft_putchar.c	\
 		ft_putstr.c		\
 		ft_putendl.c	\

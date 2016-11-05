@@ -16,7 +16,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
 	int		i;
-	int		j;
+	size_t	j;
 
 	i = 0;
 	j = 0;

@@ -6,7 +6,7 @@
 /*   By: cfatrane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 11:43:22 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/11/04 11:44:59 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/11/05 10:45:20 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char chr;
-	int	i;
+	char	chr;
+	int		i;
 
 	chr = (char)c;
 	i = ft_strlen(s);

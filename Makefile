@@ -6,7 +6,7 @@
 #    By: cfatrane <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/04 10:27:57 by cfatrane          #+#    #+#              #
-#    Updated: 2016/11/05 10:39:28 by cfatrane         ###   ########.fr        #
+#    Updated: 2016/11/05 16:51:38 by cfatrane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ SRC =	ft_bzero.c		\
 		ft_memcpy.c		\
 		ft_memccpy.c	\
 		ft_memchr.c		\
+		ft_memcmp.c		\
 		ft_strlen.c		\
 		ft_strdup.c		\
 		ft_strcpy.c		\
@@ -41,6 +42,8 @@ SRC =	ft_bzero.c		\
 		ft_strnew.c		\
 		ft_strdel.c		\
 		ft_strclr.c		\
+		ft_strequ.c		\
+		ft_strnequ.c	\
 		ft_putchar.c	\
 		ft_putstr.c		\
 		ft_putendl.c	\

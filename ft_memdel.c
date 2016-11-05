@@ -6,7 +6,7 @@
 /*   By: cfatrane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 13:47:03 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/11/04 13:47:08 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/11/05 10:44:19 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_memdel(void **ap)
 {
 	if (ap == NULL)
-		exit (0);
+		exit(0);
 	free(*ap);
 	*ap = NULL;
 }

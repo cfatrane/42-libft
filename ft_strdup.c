@@ -12,23 +12,23 @@
 
 #include "stdlib.h"
 
-char	*ft_strdup(const char *s)
+char	*ft_strdup(const char *s1)
 {
 	int		i;
-	char	*dest;
+	char	*s2;
 
 	i = 0;
-	while (s[i] != '\0')
+	while (s1[i] != '\0')
 		i++;
-	dest = (char*)malloc(sizeof(*dest) * (i + 1));
-	if (!dest)
+	s2 = (char*)malloc(sizeof(*s2) * (i + 1));
+	if (!s2)
 		return (NULL);
 	i = 0;
-	while (s[i] != '\0')
+	while (s1[i] != '\0')
 	{
-		dest[i] = s[i];
+		s2[i] = s1[i];
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	s2[i] = '\0';
+	return (s2);
 }

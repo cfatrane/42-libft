@@ -6,7 +6,7 @@
 /*   By: cfatrane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 13:48:29 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/11/04 13:48:31 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/11/05 10:53:36 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_strdel(char **as)
 {
 	if (as == NULL)
-		exit (0);
+		exit(0);
 	free(*as);
 	*as = NULL;
 }

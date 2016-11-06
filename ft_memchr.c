@@ -6,7 +6,7 @@
 /*   By: cfatrane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 11:26:14 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/11/05 12:02:59 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/11/06 16:50:13 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		if (n)
 			str++;
 	}
-	return(NULL);
+	return (NULL);
 }

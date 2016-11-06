@@ -1,18 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 13:54:41 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/11/06 16:51:19 by cfatrane         ###   ########.fr       */
+/*   Created: 2016/11/04 13:56:48 by cfatrane          #+#    #+#             */
+/*   Updated: 2016/11/04 13:56:51 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
-{
-	write(fd, &c, 1);
-}
+t_list	*ft_lstnew(void const *content, size_t content_size)

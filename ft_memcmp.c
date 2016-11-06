@@ -6,7 +6,7 @@
 /*   By: cfatrane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 11:26:27 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/11/04 11:26:35 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/11/06 16:50:30 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t				i;
+	size_t			i;
 	unsigned char	*chr1;
 	unsigned char	*chr2;
 

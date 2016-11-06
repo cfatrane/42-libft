@@ -6,7 +6,7 @@
 /*   By: cfatrane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 13:55:50 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/11/05 10:54:46 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/11/06 12:04:08 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,4 +19,3 @@ void	ft_putstr_fd(char const *s, int fd)
 		write(fd, s, ft_strlen(s));
 	}
 }
-

@@ -25,7 +25,7 @@ size_t	ft_strlen_sep(char const *s, char c)
 	return (len);
 }
 
-int	ft_count_words_sep(char const *s, char c)
+int		ft_count_words_sep(char const *s, char c)
 {
 	int	count;
 	int	sep;

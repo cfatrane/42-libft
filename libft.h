@@ -30,7 +30,7 @@ char				*ft_strcpy(char *dst, const char *src);
 char				*ft_strncpy(char *dst, const char *src, size_t n);
 char				*ft_strcat(char *s1, const char *s2);
 char				*ft_strncat(char *s1, const char *s2, size_t n);
-unsigned int		ft_strlcat(char *dest, char *src, unsigned int size);
+unsigned int		ft_strlcat(char *dst, char *src, unsigned int size);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strstr(const char *big, const char *little);
@@ -71,9 +71,9 @@ void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 
+int					ft_islower(int c);
+int					ft_isupper(int c);
 int					ft_count_words(char const *s);
-
-
 
 typedef struct		s_list
 {

@@ -28,7 +28,11 @@ char	**ft_strsplit(char const *s, char c)
 	{
 		while (*s != '\0' && *s == c)
 			s++;
-
+		len = ft_strlen_sep(char const *s, char c);
+		str[i] = ft_strsub(s, 0, len);
+		if (str[i] == NULL)
+			return (NULL);
+		s = s + ft_strlen_sep(s, c);
 		i++;
 	}
 	str[i] = ;
@@ -63,16 +67,3 @@ char	**ft_strsplit(char const *s, char c)
 	return (str);
 }*/
 
-
-int		ft_want_size(char const *s, char c)
-{
-	int		len;
-
-	len = 0;
-	while (*s != c && *s != '\0')
-	{
-		s++;
-		len++;
-	}
-	return (len);
-}

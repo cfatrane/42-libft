@@ -6,7 +6,7 @@
 /*   By: cfatrane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 13:53:23 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/11/04 13:53:25 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/11/07 13:51:55 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ char	*ft_strtrim(char const *s)
 	if (min == end)
 		return ("");
 	len = end - min;
-	return (ft_strsub(s, min,len));
+	return (ft_strsub(s, min, len));
 }

@@ -1,36 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_count_words_sep.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 13:33:14 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/11/06 12:04:35 by cfatrane         ###   ########.fr       */
+/*   Created: 2016/11/07 13:58:02 by cfatrane          #+#    #+#             */
+/*   Updated: 2016/11/07 13:58:05 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int	ft_count_words_sep(char const *s, char c)
 {
-	long int nb;
-	long int sign;
+	int	count;
+	int	sep;
 
-	nb = 0;
-	sign = 1;
-	while (*str >= 126 || *str <= 32)
-		str++;
-	if (*str == '+' || *str == '-')
+	sep = 0;
+	count = 0;
+	while (*s != '\0')
 	{
-		if (*str == '-')
-			sign = (-1);
-		str++;
+		if (sep == 1 && *s == c)
+			sep = 0;
+		if (sep == 0 && *s != c)
+		{
+			sep = 1;
+			count++;
+		}
+		s++;
 	}
-	while (ft_isdigit((int)*str))
-	{
-		nb = nb * 10 + *str - '0';
-		str++;
-	}
-	return (sign * nb);
+	return (count);
 }

@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strlen_sep.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 12:41:10 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/11/05 10:49:58 by cfatrane         ###   ########.fr       */
+/*   Created: 2016/11/07 15:05:17 by cfatrane          #+#    #+#             */
+/*   Updated: 2016/11/07 15:05:19 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_strcmp(const char *s1, const char *s2)
+size_t	ft_strlen_sep(char const *s, char c)
 {
-	while ((*s1 || *s2) && *s1 == *s2)
+	int	len;
+
+	len = 0;
+	while (*s != c && *s != '\0')
 	{
-		s1++;
-		s2++;
+		s++;
+		len++;
 	}
-	return ((unsigned char)*s1 - (unsigned char)*s2);
+	return (len);
 }

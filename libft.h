@@ -71,6 +71,11 @@ void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 
+int					ft_count_words(char const *s);
+int					ft_count_words_sep(char const *s, char c);
+int					ft_strlen_sep(char const *s, char c);
+
+
 typedef struct		s_list
 {
 	void			*content;

@@ -18,9 +18,9 @@ char	*ft_strstr(const char *big, const char *little)
 	size_t		j;
 	size_t		k;
 
-	i = 0;
 	if (*little == '\0')
-		return ((char *)big);
+		return ((char*)big);
+	i = 0;
 	while (big[i])
 	{
 		j = i;
@@ -30,7 +30,7 @@ char	*ft_strstr(const char *big, const char *little)
 			j++;
 			k++;
 			if (little[k] == '\0')
-				return ((char *)big + i);
+				return ((char*)big + i);
 		}
 		i++;
 	}

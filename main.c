@@ -33,16 +33,16 @@
 
 //ft_strstr.c
 
-/*int main(int argc, char **argv)
+int main(int argc, char **argv)
 {
 	char chaine1[] = "Hello Bonjour deux";
-	char chaine2[] = "jour";
+	char chaine2[] = "jour b";
 	printf("Ma fonction\n");
 	printf("%s\n", ft_strstr(chaine1, chaine2));
 	printf("Fonction libc\n");
 	printf("%s\n", strstr(chaine1, chaine2));
 	return 0;
-}*/
+}
 
 //ft_strnstr.c
 

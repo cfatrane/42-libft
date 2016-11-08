@@ -21,10 +21,10 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 
 	if (dst == src || n == 0)
 		return (dst);
-	oct1 = (unsigned char *)dst;
-	oct2 = (unsigned char *)src;
-	chr = (unsigned char)c;
 	i = 0;
+	oct1 = (unsigned char*)dst;
+	oct2 = (unsigned char*)src;
+	chr = (unsigned char)c;
 	while (n--)
 	{
 		oct1[i] = oct2[i];

@@ -36,7 +36,7 @@
 int main(int argc, char **argv)
 {
 	char chaine1[] = "Hello Bonjour deux";
-	char chaine2[] = "jour b";
+	char chaine2[] = "Hella";
 	printf("Ma fonction\n");
 	printf("%s\n", ft_strstr(chaine1, chaine2));
 	printf("Fonction libc\n");

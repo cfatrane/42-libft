@@ -14,34 +14,25 @@
 
 char	*ft_strstr(const char *big, const char *little)
 {
-	int	length;
-	int p;
+	size_t		i;
+	size_t		j;
+	size_t		k;
 
+	i = 0;
 	if (*little == '\0')
 		return ((char *)big);
-	length = ft_strlen(little);
-	while (*big)
-	{
-		p = ft_strncmp(big, little, length);
-		if (p == 0)
-			return ((char *)big);
-		big++;
-	}
-	return (NULL);
-}
-/*
-
-	while (i < n && haystack[i])
+	while (big[i])
 	{
 		j = i;
 		k = 0;
-		while (haystack[j] == needle[k] && j < n)
+		while (big[j] == little[k])
 		{
 			j++;
 			k++;
-			if (needle[k] == '\0')
-				return ((char *)haystack + i);
+			if (little[k] == '\0')
+				return ((char *)big + i);
 		}
 		i++;
 	}
-*/
+	return (NULL);
+}

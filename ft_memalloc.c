@@ -26,5 +26,5 @@ void	*ft_memalloc(size_t size)
 		str[i] = 0;
 		i++;
 	}
-	return ((void *)str);
+	return ((void*)str);
 }

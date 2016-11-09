@@ -27,6 +27,20 @@ size_t	ft_strlen_sep(char const *s, char c)
 
 int		ft_count_words_sep(char const *s, char c)
 {
+	int count;
+	int i;
+
+	i = 0;
+	count = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] != c)
+			count++;
+		i++;
+	}
+	return (count);
+}
+/*{
 	int	count;
 	int	sep;
 
@@ -44,7 +58,7 @@ int		ft_count_words_sep(char const *s, char c)
 		s++;
 	}
 	return (count);
-}
+}*/
 
 char	**ft_strsplit(char const *s, char c)
 {

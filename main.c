@@ -23,6 +23,17 @@
 
 //ft_strcat.c
 
+int main(int argc, char **argv)
+{
+	char chaine1[80] = "abc";
+	char chaine2[15] = "zsh";
+	printf("Ma fonction\n");
+	printf("%s\n\n", ft_strcat(chaine1, chaine2));
+	printf("Fonction libc\n");
+	printf("%s\n\n", strcat(chaine1, chaine2));
+	return 0;
+}
+
 //ft_strncat.c
 
 //ft_strlcat.c
@@ -33,16 +44,17 @@
 
 //ft_strstr.c
 
-int main(int argc, char **argv)
+/*int main(int argc, char **argv)
 {
 	char chaine1[] = "Hello Bonjour deux";
 	char chaine2[] = "Hella";
-	printf("Ma fonction\n");
-	printf("%s\n", ft_strstr(chaine1, chaine2));
-	printf("Fonction libc\n");
-	printf("%s\n", strstr(chaine1, chaine2));
+	printf("Ma fonction:\n");
+	printf("%s\n\n", ft_strstr(chaine1, chaine2));
+	printf("Fonction libc:\n");
+	printf("%s\n\n", strstr(chaine1, chaine2));
 	return 0;
-}
+}*/
+
 
 //ft_strnstr.c
 
@@ -50,7 +62,31 @@ int main(int argc, char **argv)
 
 //ft_strncmp.c
 
+/*int main(int argc, char **argv)
+{
+	char chaine1[] = "abc";
+	char chaine2[] = "abcde";
+	printf("Ma fonction:\n");
+	printf("%d\n\n", ft_strncmp(chaine1, chaine2, 3));
+	printf("Fonction libc:\n");
+	printf("%d\n\n", strncmp(chaine1, chaine2, 3));
+	return 0;
+}*/
+
+
 //ft_atoi.c
+
+/*int main(int argc, char **argv)
+{
+	char chaine[] = "	4	d4d4d4d4";
+	printf("Ma fonction:\n");
+	printf("%d\n\n	", ft_atoi(chaine));
+	printf("Fonction libc:\n");
+	printf("%d\n\n", atoi(chaine));
+	return 0;
+
+}*/
+
 
 //ft_isalpha.c
 

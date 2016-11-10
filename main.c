@@ -3,6 +3,16 @@
 
 //ft_memset.c
 
+/*int main ()
+{
+   char str[50]="Bonsoir les amis";
+
+	printf("%s\n", ft_memset(str, 'k', 9));
+	printf("%s\n", memset(str, 'k', 9));
+
+   return(0);
+}*/
+
 //ft_bzero.c
 
 //ft_memcpy.c
@@ -59,12 +69,12 @@
 
 //ft_strrchr.c
 
-int main(void)
+/*int main(void)
 {
     printf("%s\n", ft_strrchr("hamza", '\0'));
     printf("%s\n", strrchr("hamza", '\0'));
     return (0);
-}
+}*/
 
 //ft_strstr.c
 
@@ -83,6 +93,17 @@ int main(void)
 //ft_strnstr.c
 
 //ft_strcmp.c
+
+int main(int argc, char **argv)
+{
+	char chaine1[] = "abcse";
+	char chaine2[] = "abcde";
+	printf("Ma fonction:\n");
+	printf("%d\n\n", ft_strcmp(chaine1, chaine2));
+	printf("Fonction libc:\n");
+	printf("%d\n\n", strcmp(chaine1, chaine2));
+	return 0;
+}
 
 //ft_strncmp.c
 

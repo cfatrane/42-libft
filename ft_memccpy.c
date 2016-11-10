@@ -14,21 +14,20 @@
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	size_t			i;
 	unsigned char	*oct1;
 	unsigned char	*oct2;
 	unsigned char	chr;
 
-	i = 0;
 	oct1 = (unsigned char*)dst;
 	oct2 = (unsigned char*)src;
 	chr = (unsigned char)c;
 	while (n--)
 	{
-		oct1[i] = oct2[i];
-		if (oct1[i] == chr)
-			return (oct1 + i + 1);
-		i++;
+		*oct1 = *oct2;
+		if (*oct1 == chr)
+			return (oct1 + 1);
+		oct1++;
+		oct2++;
 	}
 	return (NULL);
 }

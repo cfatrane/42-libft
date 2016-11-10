@@ -1,27 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 11:43:22 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/11/05 10:45:20 by cfatrane         ###   ########.fr       */
+/*   Created: 2016/11/04 11:26:03 by cfatrane          #+#    #+#             */
+/*   Updated: 2016/11/04 11:26:06 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	size_t i;
+	unsigned char	*tmp;
+	unsigned char	*oct1;
+	unsigned char	*oct2;
+	size_t			i;
 
-	i = ft_strlen(s);
-	while (i >= 0)
+	if (!(tmp = (unsigned char*)malloc(sizeof(tmp) * n)))
+		return (NULL);
+	oct1 = (unsigned char*)dst;
+	oct2 = (unsigned char*)src;
+	i = 0;
+	while (i < n)
 	{
-		if (s[i] == c)
-			return ((char*)s + i);
-		i--;
+		tmp[i] = oct2[i];
+		i++;
 	}
-	return (NULL);
+	i = 0;
+	while (i < n)
+	{
+		oct1[i] = tmp[i];
+		i++;
+	}
+	free (tmp);
+	return (dst);
 }

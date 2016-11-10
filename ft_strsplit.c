@@ -68,6 +68,6 @@ char	**ft_strsplit(char const *s, char c)
 		s = s + ft_strlen_sep(s, c);
 		i++;
 	}
-	str[i] = '\0';
+	str[i] = NULL;
 	return (str);
 }

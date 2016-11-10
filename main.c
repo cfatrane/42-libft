@@ -42,11 +42,11 @@
 
 /*int main(int argc, char **argv)
 {
-	char chaine1[80] = "abc";
-	char chaine2[15] = "zsh";
-	printf("Ma fonction\n");
+	char chaine1[80] = "Hamaza";
+	char chaine2[15] = "Elhadi";
+	printf("Ma fonction ft_strcat\n");
 	printf("%s\n\n", ft_strcat(chaine1, chaine2));
-	printf("Fonction libc\n");
+	printf("Fonction libc strcat\n");
 	printf("%s\n\n", strcat(chaine1, chaine2));
 	return 0;
 }*/
@@ -59,9 +59,16 @@
 
 //ft_strrchr.c
 
+int main(void)
+{
+    printf("%s\n", ft_strrchr("hamza", '\0'));
+    printf("%s\n", strrchr("hamza", '\0'));
+    return (0);
+}
+
 //ft_strstr.c
 
-int main(int argc, char **argv)
+/*int main(int argc, char **argv)
 {
 	char chaine1[] = "";
 	char chaine2[] = "";
@@ -70,7 +77,7 @@ int main(int argc, char **argv)
 	printf("Fonction libc:\n");
 	printf("%s\n\n", strstr(chaine1, chaine2));
 	return 0;
-}
+}*/
 
 
 //ft_strnstr.c

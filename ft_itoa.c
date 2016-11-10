@@ -23,4 +23,5 @@ char	*ft_itoa(int n)
 	str = (char*)malloc(sizeof(*str) * (len + 1));
 	if (!str)
 		return (NULL);
+	
 }

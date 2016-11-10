@@ -15,10 +15,12 @@
 char	*ft_itoa(int n)
 {
 	char	*str;
-	int		i;
+	int		len;
 
-	str = (char*)malloc(sizeof(*str) * );
+	len = 0;
+	while (n /= 10)
+		len++;
+	str = (char*)malloc(sizeof(*str) * (len + 1));
 	if (!str)
 		return (NULL);
-		
 }

@@ -63,11 +63,11 @@ char	**ft_strsplit(char const *s, char c)
 			s++;
 		len = ft_strlen_sep(s, c);
 		str[i] = ft_strsub(s, 0, len);
-		if (str[i] == NULL)
+		if (str[i] == '\0')
 			return (NULL);
 		s = s + ft_strlen_sep(s, c);
 		i++;
 	}
-	str[i] = NULL;
+	str[i] = '\0';
 	return (str);
 }

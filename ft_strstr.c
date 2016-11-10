@@ -16,20 +16,17 @@ char	*ft_strstr(const char *big, const char *little)
 {
 	size_t		i;
 	size_t		j;
-	size_t		k;
 
 	if (*little == '\0')
 		return ((char*)big);
 	i = 0;
 	while (big[i])
 	{
-		j = i;
-		k = 0;
-		while (big[j] == little[k])
+		j = 0;
+		while (big[i + j] == little[j])
 		{
 			j++;
-			k++;
-			if (little[k] == '\0')
+			if (little[j] == '\0')
 				return ((char*)big + i);
 		}
 		i++;

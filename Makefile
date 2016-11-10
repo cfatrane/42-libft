@@ -64,6 +64,7 @@ SRC =	ft_memset.c		\
 		ft_putnbr_fd.c	\
 		ft_islower.c	\
 		ft_isupper.c	\
+		ft_isspace.c	\
 
 CC = gcc
 

@@ -61,16 +61,16 @@
 
 //ft_strstr.c
 
-/*int main(int argc, char **argv)
+int main(int argc, char **argv)
 {
-	char chaine1[] = "Hello Bonjour deux";
-	char chaine2[] = "Hella";
+	char chaine1[] = "";
+	char chaine2[] = "";
 	printf("Ma fonction:\n");
 	printf("%s\n\n", ft_strstr(chaine1, chaine2));
 	printf("Fonction libc:\n");
 	printf("%s\n\n", strstr(chaine1, chaine2));
 	return 0;
-}*/
+}
 
 
 //ft_strnstr.c
@@ -149,7 +149,7 @@
 
 //ft_strsplit.c
 
-int main(int argc, char **argv)
+/*int main(int argc, char **argv)
 {
 	int i = 0, j = 0;
 	char **tab;
@@ -161,7 +161,7 @@ int main(int argc, char **argv)
 		i++;
  	}
   return 0;
-}
+}*/
 
 
 //ft_putchar.c

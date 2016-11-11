@@ -22,6 +22,6 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 		tmp = ft_memcpy(tmp, src, n);
 		dst = ft_memcpy(dst, tmp, n);
 	}
-	free (tmp);
+	free(tmp);
 	return (dst);
 }

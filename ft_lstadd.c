@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_words_sep.c                               :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/07 13:58:02 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/11/07 13:58:05 by cfatrane         ###   ########.fr       */
+/*   Created: 2016/11/04 13:58:33 by cfatrane          #+#    #+#             */
+/*   Updated: 2016/11/04 13:58:36 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_count_words_sep(char const *s, char c)
+void	ft_lstadd(t_list **alst, t_list *new)
 {
-	int	count;
-	int	sep;
-
-	sep = 0;
-	count = 0;
-	while (*s != '\0')
+	if (!*alst)
 	{
-		if (sep == 1 && *s == c)
-			sep = 0;
-		if (sep == 0 && *s != c)
-		{
-			sep = 1;
-			count++;
-		}
-		s++;
+		*alst = new;
+		new->next = NULL;
+		return ;
 	}
-	return (count);
+	new->next = *alst;
+	*alst = new;
 }

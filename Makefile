@@ -67,6 +67,7 @@ SRC =	ft_memset.c		\
 		ft_islower.c	\
 		ft_isupper.c	\
 		ft_isspace.c	\
+		ft_lstadd.c		\
 
 CC = gcc
 
@@ -75,14 +76,17 @@ CFLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME):
-	$(CC) $(CFLAGS) -c $(SRC)
-	ar rc $(NAME) *.o
-	ranlib $(NAME)
+	@$(CC) $(CFLAGS) -c $(SRC)
+	@echo "Creation of $(NAME)"
+	@ar rc $(NAME) *.o
+	@ranlib $(NAME)
 
 clean:
-	rm -f *.o
+	@rm -f *.o
+	@echo "Files .o deleted\n"
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
+	@echo "Binary $(NAME) deleted\n"
 
 re: fclean all

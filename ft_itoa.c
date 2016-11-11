@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*ft_strrev(char *str)
+static char	*ft_strrev(char *str)
 {
 	int		length;
 	int		i;
@@ -20,7 +20,10 @@ char	*ft_strrev(char *str)
 
 	length = 0;
 	i = 0;
-	while (str[++length]);
+	while (str[length])
+	{
+		++length;
+	}
 	while (i < (length / 2))
 	{
 		temp = str[i];
@@ -32,12 +35,12 @@ char	*ft_strrev(char *str)
 	return (str);
 }
 
-int		count(int num)
+static int	count(int num)
 {
 	int			count;
 	long int	nb;
 
-	count = 1;
+	count = 0;
 	nb = num;
 	if (num < 0)
 	{
@@ -45,7 +48,7 @@ int		count(int num)
 		count++;
 	}
 	if (num == 0)
-		count = 2;
+		count = 1;
 	while (nb > 0)
 	{
 		nb /= 10;
@@ -54,7 +57,7 @@ int		count(int num)
 	return (count);
 }
 
-char	*ft_itoa(int num)
+char		*ft_itoa(int num)
 {
 	char		*str;
 	int			i;
@@ -65,7 +68,7 @@ char	*ft_itoa(int num)
 	n = num;
 	if ((sign = n) < 0)
 		n = -n;
-	length = count(num) - 1;
+	length = count(num);
 	if (!(str = (char*)malloc(sizeof(*str) * (length + 1))))
 		return (NULL);
 	str[0] = (n % 10) + 48;

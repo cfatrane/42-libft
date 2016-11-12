@@ -14,24 +14,22 @@
 
 static char	*ft_strrev(char *str)
 {
-	int		length;
+	int		len;
 	int		i;
-	char	temp;
+	char	tmp;
 
-	length = 0;
+	len = 0;
 	i = 0;
-	while (str[length])
+	while (str[len])
+		++len;
+	while (i < (len / 2))
 	{
-		++length;
-	}
-	while (i < (length / 2))
-	{
-		temp = str[i];
-		str[i] = str[length - i - 1];
-		str[length - i - 1] = temp;
+		tmp = str[i];
+		str[i] = str[len - i - 1];
+		str[len - i - 1] = tmp;
 		i++;
 	}
-	str[length] = '\0';
+	str[len] = '\0';
 	return (str);
 }
 
@@ -61,15 +59,15 @@ char		*ft_itoa(int num)
 {
 	char		*str;
 	int			i;
-	int			length;
+	int			len;
 	int			sign;
 	long int	n;
 
 	n = num;
 	if ((sign = n) < 0)
 		n = -n;
-	length = count(num);
-	if (!(str = (char*)malloc(sizeof(*str) * (length + 1))))
+	len = count(num);
+	if (!(str = (char*)malloc(sizeof(*str) * (len + 1))))
 		return (NULL);
 	str[0] = (n % 10) + 48;
 	i = 1;

@@ -74,7 +74,6 @@ void				ft_putnbr_fd(int n, int fd);
 int					ft_islower(int c);
 int					ft_isspace(int c);
 int					ft_isupper(int c);
-int					ft_count_words(char const *s);
 
 typedef struct		s_list
 {

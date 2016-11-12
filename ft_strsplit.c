@@ -54,7 +54,7 @@ char			**ft_strsplit(char const *s, char c)
 		return (NULL);
 	i = 0;
 	nb_words = ft_count_words_sep(s, c);
-	if (!(str = ((char**)malloc(sizeof(*str) * (nb_words + 1)))));
+	if (!(str = ((char**)malloc(sizeof(*str) * (nb_words + 1)))))
 		return (NULL);
 	while (nb_words--)
 	{

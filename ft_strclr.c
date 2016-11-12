@@ -16,7 +16,7 @@ void	ft_strclr(char *s)
 {
 	if (s)
 	{
-		while (s != NULL && *s)
+		while (*s)
 			*s++ = '\0';
 	}
 }

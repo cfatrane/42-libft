@@ -21,10 +21,9 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	if (!s)
 		return (NULL);
 	len = ft_strlen(s);
-	str = (char*)malloc(sizeof(*str) * (len + 1));
-	i = 0;
-	if (!str)
+	if (!(str = (char*)malloc(sizeof(*str) * (len + 1))))
 		return (NULL);
+	i = 0;
 	if (s && f)
 	{
 		while (s[i] != '\0')

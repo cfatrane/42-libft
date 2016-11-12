@@ -29,7 +29,7 @@ char	*ft_strtrim(char const *s)
 			&& (s[max - 1] == ' ' || s[max - 1] == '\n' || s[max - 1] == '\t'))
 		max--;
 	if (min == max)
-		return ("\0");
+		return (ft_strnew(1));
 	len = max - min;
 	return (ft_strsub(s, min, len));
 }

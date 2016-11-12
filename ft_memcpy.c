@@ -22,10 +22,6 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	oct1 = (unsigned char*)dst;
 	oct2 = (unsigned char*)src;
 	while (n--)
-	{
-		*oct1 = *oct2;
-		oct1++;
-		oct2++;
-	}
+		*oct1++ = *oct2++;
 	return (dst);
 }

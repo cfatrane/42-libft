@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 11:43:22 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/11/05 10:45:20 by cfatrane         ###   ########.fr       */
+/*   Created: 2016/11/04 13:56:48 by cfatrane          #+#    #+#             */
+/*   Updated: 2016/11/04 13:56:51 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	int i;
-
-	i = ft_strlen(s);
-	while (i >= 0)
-	{
-		if (s[i] == (char)c)
-			return ((char*)s + i);
-		i--;
-	}
-	return (NULL);
+	
 }

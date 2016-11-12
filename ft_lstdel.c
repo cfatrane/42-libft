@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 13:58:33 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/11/04 13:58:36 by cfatrane         ###   ########.fr       */
+/*   Created: 2016/11/04 13:57:13 by cfatrane          #+#    #+#             */
+/*   Updated: 2016/11/04 13:57:15 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd(t_list **alst, t_list *new)
-/*{
-	s_list *element;
-	element->content = *new;
-	element->next = *alst;
-	*alst = element
-}*/
+void 	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	if (!*alst)
-	{
-		*alst = new;
-		new->next = NULL;
-		return ;
-	}
-	new->next = *alst;
-	*alst = new;
+
 }

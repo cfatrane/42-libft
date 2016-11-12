@@ -6,7 +6,7 @@
 #    By: cfatrane <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/04 10:27:57 by cfatrane          #+#    #+#              #
-#    Updated: 2016/11/05 17:10:55 by cfatrane         ###   ########.fr        #
+#    Updated: 2016/11/12 19:24:23 by cfatrane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,10 +64,13 @@ SRC =	ft_memset.c		\
 		ft_putstr_fd.c	\
 		ft_putendl_fd.c	\
 		ft_putnbr_fd.c	\
+		ft_lstnew.c		\
+		ft_lstdelone.c	\
+		ft_lstdel.c		\
+		ft_lstadd.c		\
 		ft_islower.c	\
 		ft_isupper.c	\
 		ft_isspace.c	\
-		ft_lstadd.c		\
 
 CC = gcc
 
@@ -90,3 +93,5 @@ fclean: clean
 	@echo "Binary $(NAME) deleted\n"
 
 re: fclean all
+
+.PHONY: all, clean, fclean, re

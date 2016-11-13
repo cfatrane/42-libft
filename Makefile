@@ -6,7 +6,7 @@
 #    By: cfatrane <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/04 10:27:57 by cfatrane          #+#    #+#              #
-#    Updated: 2016/11/12 19:24:23 by cfatrane         ###   ########.fr        #
+#    Updated: 2016/11/13 13:47:23 by cfatrane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,6 +66,7 @@ SRC =	ft_memset.c		\
 		ft_putnbr_fd.c	\
 		ft_lstnew.c		\
 		ft_lstdelone.c	\
+		ft_lstdel.c		\
 		ft_lstadd.c		\
 		ft_islower.c	\
 		ft_isupper.c	\

@@ -66,7 +66,6 @@ SRC =	ft_memset.c		\
 		ft_putnbr_fd.c	\
 		ft_lstnew.c		\
 		ft_lstdelone.c	\
-		ft_lstdel.c		\
 		ft_lstadd.c		\
 		ft_islower.c	\
 		ft_isupper.c	\

@@ -16,12 +16,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char			*str;
 	unsigned int	i;
-	size_t			len;
 
 	if (!s)
 		return (NULL);
-	len = ft_strlen(s);
-	if (!(str = (char*)malloc(sizeof(*str) * (len + 1))))
+	if (!(str = ft_strnew(ft_strlen(s))))
 		return (NULL);
 	i = 0;
 	if (s && f)

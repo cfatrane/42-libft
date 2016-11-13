@@ -13,19 +13,7 @@
 #include "libft.h"
 
 void	ft_lstadd(t_list **alst, t_list *new)
-/*{
-	s_list *element;
-	element->content = *new;
-	element->next = *alst;
-	*alst = element
-}*/
 {
-	if (!*alst)
-	{
-		*alst = new;
-		new->next = NULL;
-		return ;
-	}
 	new->next = *alst;
 	*alst = new;
 }

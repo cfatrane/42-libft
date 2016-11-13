@@ -88,5 +88,6 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_islower(int c);
 int					ft_isspace(int c);
 int					ft_isupper(int c);
+char				*ft_strndup(const char *s1, size_t n);
 
 #endif

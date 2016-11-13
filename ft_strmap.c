@@ -16,12 +16,10 @@ char	*ft_strmap(char const *s, char (*f)(char))
 {
 	char	*str;
 	size_t	i;
-	size_t	len;
 
 	if (!s)
 		return (NULL);
-	len = ft_strlen(s);
-	if (!(str = (char*)malloc(sizeof(*str) * (len + 1))))
+	if (!(str = ft_strnew(ft_strlen(s))))
 		return (NULL);
 	i = 0;
 	if (s && f)

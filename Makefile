@@ -73,8 +73,10 @@ SRC =	ft_memset.c				\
 		ft_islower.c			\
 		ft_isupper.c			\
 		ft_isspace.c			\
+		ft_count_itoa.c			\
 		ft_count_words_sep.c	\
 		ft_strlen_sep.c			\
+		ft_strrev_itoa.c		\
 
 OBJ = $(SRC:.c=.o)
 

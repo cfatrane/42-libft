@@ -88,7 +88,9 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_islower(int c);
 int					ft_isspace(int c);
 int					ft_isupper(int c);
+int					ft_count_itoa(int num);
 int					ft_count_words_sep(char const *s, char c);
 size_t				ft_strlen_sep(char const *s, char c);
+char				*ft_strrev_itoa(char *str);
 
 #endif

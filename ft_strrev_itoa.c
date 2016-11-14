@@ -1,40 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_strrev_itoa.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 13:54:00 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/11/04 13:54:03 by cfatrane         ###   ########.fr       */
+/*   Created: 2016/11/14 14:21:35 by cfatrane          #+#    #+#             */
+/*   Updated: 2016/11/14 14:21:37 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int num)
+char	*ft_strrev_itoa(char *str)
 {
-	char		*str;
-	int			i;
-	int			len;
-	int			sign;
-	long int	n;
+	int		len;
+	int		i;
+	char	tmp;
 
-	n = num;
-	if ((sign = n) < 0)
-		n = -n;
-	len = ft_count_itoa(num);
-	if (!(str = (char*)malloc(sizeof(*str) * (len + 1))))
-		return (NULL);
-	str[0] = (n % 10) + 48;
-	i = 1;
-	while ((n /= 10) > 0)
+	len = 0;
+	i = 0;
+	while (str[len])
+		++len;
+	while (i < (len / 2))
 	{
-		str[i] = (n % 10) + 48;
+		tmp = str[i];
+		str[i] = str[len - i - 1];
+		str[len - i - 1] = tmp;
 		i++;
 	}
-	if (sign < 0)
-		str[i++] = '-';
-	str[i] = '\0';
-	return (ft_strrev_itoa(str));
+	str[len] = '\0';
+	return (str);
 }

@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_count_words_sep.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 11:26:14 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/11/06 16:50:13 by cfatrane         ###   ########.fr       */
+/*   Created: 2016/11/14 13:17:15 by cfatrane          #+#    #+#             */
+/*   Updated: 2016/11/14 13:17:32 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int	ft_count_words_sep(char const *s, char c)
 {
-	unsigned char *str;
+	int	count;
+	int	sep;
 
-	str = (unsigned char*)s;
-	while (n--)
+	sep = 0;
+	count = 0;
+	while (*s != '\0')
 	{
-		if (*str == (unsigned char)c)
-			return (str);
-		str++;
+		if (sep == 1 && *s == c)
+			sep = 0;
+		if (sep == 0 && *s != c)
+		{
+			sep = 1;
+			count++;
+		}
+		s++;
 	}
-	return (NULL);
+	return (count);
 }

@@ -17,10 +17,7 @@ size_t	ft_strlen_sep(char const *s, char c)
 	int	len;
 
 	len = 0;
-	while (*s != c && *s != '\0')
-	{
-		s++;
+	while (s[len] != c && s[len] != '\0')
 		len++;
-	}
 	return (len);
 }

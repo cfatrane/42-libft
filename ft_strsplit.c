@@ -12,38 +12,7 @@
 
 #include "libft.h"
 
-static size_t	ft_strlen_sep(char const *s, char c)
-{
-	int	len;
-
-	len = 0;
-	while (s[len] != c && s[len] != '\0')
-		len++;
-	return (len);
-}
-
-static int		ft_count_words_sep(char const *s, char c)
-{
-	int	count;
-	int	sep;
-
-	sep = 0;
-	count = 0;
-	while (*s != '\0')
-	{
-		if (sep == 1 && *s == c)
-			sep = 0;
-		if (sep == 0 && *s != c)
-		{
-			sep = 1;
-			count++;
-		}
-		s++;
-	}
-	return (count);
-}
-
-char			**ft_strsplit(char const *s, char c)
+char	**ft_strsplit(char const *s, char c)
 {
 	char	**str;
 	int		i;

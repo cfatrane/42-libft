@@ -14,7 +14,7 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	char	*tmp;
+	char *tmp;
 
 	tmp = ft_strnew(n);
 	if (tmp)

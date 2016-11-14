@@ -10,15 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-
+	if ((lst->next) != NULL)
+		(ft_lstiter(lst->next, f));
+	f (lst);
 }
-
-Description Parcourt la liste lst en appliquant à chaque maillon la fonction f.
-Param. #1 Pointeur sur le premier maillon d’une liste.
-Param. #2 L’adresse d’une fonction à laquelle appliquer chaque maillon
-de la liste.
-Retour Rien.
-Fonctions libc Aucune.

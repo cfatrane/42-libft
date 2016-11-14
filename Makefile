@@ -76,7 +76,6 @@ SRC =	ft_memset.c				\
 		ft_count_words_sep.c	\
 		ft_strlen_sep.c			\
 
-
 OBJ = $(SRC:.c=.o)
 
 CC = gcc

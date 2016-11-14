@@ -72,7 +72,9 @@ SRC =	ft_memset.c		\
 		ft_lstmap.c		\
 		ft_islower.c	\
 		ft_isupper.c	\
-		ft_isspace.c	\
+		ft_isspace.c
+
+OBJ = $(SRC:.c=.o)
 
 CC = gcc
 
@@ -83,11 +85,11 @@ all: $(NAME)
 $(NAME):
 	@$(CC) $(CFLAGS) -c $(SRC)
 	@echo "Creation of $(NAME)"
-	@ar rc $(NAME) *.o
+	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 
 clean:
-	@rm -f *.o
+	@rm -f $(OBJ)
 	@echo "Files .o deleted\n"
 
 fclean: clean

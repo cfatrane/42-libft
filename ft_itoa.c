@@ -26,11 +26,11 @@ char	*ft_itoa(int num)
 	len = ft_count_itoa(num);
 	if (!(str = (char*)malloc(sizeof(*str) * (len + 1))))
 		return (NULL);
-	str[0] = (n % 10) + 48;
+	str[0] = (n % 10) + '0';
 	i = 1;
 	while ((n /= 10) > 0)
 	{
-		str[i] = (n % 10) + 48;
+		str[i] = (n % 10) + '0';
 		i++;
 	}
 	if (sign < 0)

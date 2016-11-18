@@ -6,7 +6,7 @@
 /*   By: cfatrane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 10:35:46 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/11/04 10:35:50 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/11/18 12:57:52 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,5 +92,7 @@ int					ft_count_itoa(int num);
 int					ft_count_words_sep(char const *s, char c);
 size_t				ft_strlen_sep(char const *s, char c);
 char				*ft_strrev_itoa(char *str);
+size_t				ft_lstcount(t_list *list);
+
 
 #endif

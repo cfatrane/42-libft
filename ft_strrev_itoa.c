@@ -18,8 +18,10 @@ char	*ft_strrev_itoa(char *str)
 	int		i;
 	char	tmp;
 
-	len = ft_strlen(str);
+	len = 0;
 	i = 0;
+	while (str[len])
+		++len;
 	while (i < (len / 2))
 	{
 		tmp = str[i];

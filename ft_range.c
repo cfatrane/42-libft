@@ -1,40 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 13:54:00 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/11/04 13:54:03 by cfatrane         ###   ########.fr       */
+/*   Created: 2016/11/17 14:28:10 by cfatrane          #+#    #+#             */
+/*   Updated: 2016/11/17 14:28:25 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int num)
+int	*ft_range(int min, int max)
 {
-	char		*str;
-	int			i;
-	int			len;
-	int			sign;
-	long int	n;
+	int i;
+	int *tab;
 
-	n = num;
-	if ((sign = n) < 0)
-		n = -n;
-	len = ft_count_itoa(num);
-	if (!(str = (char*)malloc(sizeof(*str) * (len + 1))))
-		return (NULL);
-	str[0] = (n % 10) + 48;
-	i = 1;
-	while ((n /= 10) > 0)
+	i = 0;
+	if (min >= max)
+		return (0);
+	tab = (int*)malloc(sizeof(*tab) * (max - min));
+	while (min < max)
 	{
-		str[i] = (n % 10) + 48;
+		tab[i] = min;
+		min++;
 		i++;
 	}
-	if (sign < 0)
-		str[i++] = '-';
-	str[i] = '\0';
-	return (ft_strrev_itoa(str));
+	return (tab);
 }

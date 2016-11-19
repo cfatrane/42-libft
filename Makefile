@@ -6,7 +6,7 @@
 #    By: cfatrane <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/04 10:27:57 by cfatrane          #+#    #+#              #
-#    Updated: 2016/11/13 13:47:23 by cfatrane         ###   ########.fr        #
+#    Updated: 2016/11/19 17:33:59 by cfatrane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,6 +77,7 @@ SRC =	ft_memset.c				\
 		ft_count_words_sep.c	\
 		ft_strlen_sep.c			\
 		ft_strrev_itoa.c		\
+		ft_lstcount.c			\
 
 OBJ = $(SRC:.c=.o)
 
@@ -88,15 +89,18 @@ all: $(NAME)
 
 $(NAME):
 	@$(CC) $(CFLAGS) -c $(SRC)
-	@echo "Creation of $(NAME)"
+	@echo "Creation of $(NAME)..."
 	@ar rc $(NAME) $(OBJ)
+	@echo "$(NAME) has been created"
 	@ranlib $(NAME)
 
 clean:
+	@echo "Removal of .o files..."
 	@rm -f $(OBJ)
 	@echo "Files .o deleted\n"
 
 fclean: clean
+	@echo "Removal of $(NAME)..."
 	@rm -f $(NAME)
 	@echo "Binary $(NAME) deleted\n"
 

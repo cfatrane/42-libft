@@ -6,7 +6,7 @@
 /*   By: cfatrane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 10:35:46 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/11/19 15:03:20 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/11/19 17:30:56 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,5 +93,8 @@ int					ft_count_words_sep(char const *s, char c);
 size_t				ft_strlen_sep(char const *s, char c);
 char				*ft_strrev_itoa(char *str);
 size_t				ft_lstcount(t_list *list);
+void				ft_swap(int *a, int *b);
+int					ft_sqrt(int nb);
+int					*ft_range(int min, int max);
 
 #endif

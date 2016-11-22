@@ -6,7 +6,7 @@
 #    By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/22 10:31:18 by cfatrane          #+#    #+#              #
-#*   Updated: 2016/11/22 10:31:56 by cfatrane         ###   ########.fr       *#
+#*   Updated: 2016/11/22 10:50:28 by cfatrane         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,6 +73,7 @@ SRC =	ft_memset.c				\
 		ft_islower.c			\
 		ft_isupper.c			\
 		ft_isspace.c			\
+		ft_strndup.c			\
 		ft_count_itoa.c			\
 		ft_count_words_sep.c	\
 		ft_strlen_sep.c			\

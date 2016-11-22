@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cfatrane <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 11:23:38 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/11/06 16:49:21 by cfatrane         ###   ########.fr       */
+/*   Created: 2016/11/22 10:37:44 by cfatrane          #+#    #+#             */
+/*   Updated: 2016/11/22 10:37:46 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	oct1 = (unsigned char*)dst;
 	oct2 = (unsigned char*)src;
 	while (n--)
+	{
 		*oct1++ = *oct2++;
+	}
 	return (dst);
 }

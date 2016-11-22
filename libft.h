@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 10:45:03 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/11/22 10:45:10 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/11/22 10:49:26 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,7 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_islower(int c);
 int					ft_isspace(int c);
 int					ft_isupper(int c);
+char				*ft_strndup(const char *s1, size_t n);
 int					ft_count_itoa(int num);
 int					ft_count_words_sep(char const *s, char c);
 size_t				ft_strlen_sep(char const *s, char c);

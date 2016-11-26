@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 10:33:45 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/11/22 10:33:49 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/11/25 16:47:36 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,15 @@ char	*ft_itoa(int num)
 {
 	char		*str;
 	int			i;
-	int			len;
+	int			lenght;
 	int			sign;
 	long int	n;
 
 	n = num;
 	if ((sign = n) < 0)
 		n = -n;
-	len = ft_count_itoa(num);
-	if (!(str = (char*)malloc(sizeof(*str) * (len + 1))))
+	lenght = ft_count_itoa(num);
+	if (!(str = (char*)malloc(sizeof(*str) * (lenght + 1))))
 		return (NULL);
 	str[0] = (n % 10) + 48;
 	i = 1;

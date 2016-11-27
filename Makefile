@@ -6,7 +6,7 @@
 #    By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/22 10:31:18 by cfatrane          #+#    #+#              #
-#*   Updated: 2016/11/25 17:05:33 by cfatrane         ###   ########.fr       *#
+#*   Updated: 2016/11/26 16:36:03 by cfatrane         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -96,7 +96,7 @@ $(NAME):
 	@ranlib $(NAME)
 
 clean:
-	@echo "Removal of .o files..."
+	@echo "Removal of .o files of $(NAME) ..."
 	@rm -f $(OBJ)
 	@echo "Files .o deleted\n"
 

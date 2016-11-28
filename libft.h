@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 10:45:03 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/11/22 10:49:26 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/11/28 19:09:13 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,5 +97,7 @@ size_t				ft_lstcount(t_list *list);
 void				ft_swap(int *a, int *b);
 int					ft_sqrt(int nb);
 int					*ft_range(int min, int max);
+char				*ft_strccpy(char *dst, const char *src, char c);
+char				*ft_strcdup(const char *s1, char c);
 
 #endif

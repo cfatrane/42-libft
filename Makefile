@@ -6,7 +6,7 @@
 #    By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/29 16:05:24 by cfatrane          #+#    #+#              #
-#*   Updated: 2016/11/30 11:38:32 by cfatrane         ###   ########.fr       *#
+#*   Updated: 2016/11/30 12:03:19 by cfatrane         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,6 +70,7 @@ SRC_NAME =	ft_memset.c				\
 			ft_lstadd.c				\
 			ft_lstiter.c			\
 			ft_lstmap.c				\
+			get_next_line.c			\
 			ft_islower.c			\
 			ft_isupper.c			\
 			ft_isspace.c			\

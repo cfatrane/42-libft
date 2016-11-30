@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/28 19:04:36 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/11/28 19:08:40 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/11/30 10:04:36 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,3 @@ char	*ft_strcdup(const char *s1, char c)
 	ft_strccpy(s2, s1, c);
 	return (s2);
 }
-

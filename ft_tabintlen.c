@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstcount.c                                      :+:      :+:    :+:   */
+/*   ft_tabintlen.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/22 10:33:59 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/11/30 11:15:59 by cfatrane         ###   ########.fr       */
+/*   Created: 2016/12/02 13:30:52 by cfatrane          #+#    #+#             */
+/*   Updated: 2016/12/02 13:33:40 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_lstcount(t_list *list)
+size_t	ft_tabintlen(int *tab)
 {
-	if (list == NULL)
-		return (0);
-	return (ft_lstcount(list->next) + 1);
+	size_t i;
+
+	i = sizeof tab / sizeof tab[0];
+	return (i);
 }

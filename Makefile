@@ -6,7 +6,7 @@
 #    By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/29 16:05:24 by cfatrane          #+#    #+#              #
-#*   Updated: 2016/12/02 13:35:40 by cfatrane         ###   ########.fr       *#
+#*   Updated: 2016/12/05 11:48:41 by cfatrane         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,6 +76,7 @@ SRC_NAME =	ft_memset.c				\
 			ft_isspace.c			\
 			ft_strndup.c			\
 			ft_tabintlen.c			\
+			ft_createtab.c			\
 			ft_lstlen.c				\
 			ft_count_itoa.c			\
 			ft_count_words_sep.c	\

@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/05 11:44:59 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/12/05 11:47:41 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/12/05 16:21:04 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,10 @@ int		**ft_createtab(int nblin, int nbcol)
 	int *tab2;
 
 	i = 0;
-	tab = (int**)malloc(sizeof(int*) * nblin);
-	tab2 = (int*)malloc(sizeof(int) * (nbcol * nblin));
+	if (!(tab = (int**)malloc(sizeof(tab) * nblin)))
+		return (NULL);
+	if (!(tab2 = (int*)malloc(sizeof(tab2) * (nbcol * nblin))))
+		return (NULL);
 	while (i < nblin)
 	{
 		tab[i] = &tab2[i * nbcol];

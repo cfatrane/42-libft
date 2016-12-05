@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/02 13:30:52 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/12/02 13:33:40 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/12/05 18:26:01 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@ size_t	ft_tabintlen(int *tab)
 {
 	size_t i;
 
-	i = sizeof tab / sizeof tab[0];
+	i = sizeof(tab) / sizeof(tab[0]);
 	return (i);
 }

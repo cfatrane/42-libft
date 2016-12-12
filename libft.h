@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 10:45:03 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/12/06 16:46:11 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/12/12 18:17:06 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,7 @@ int					get_next_line(const int fd, char **line);
 int					ft_islower(int c);
 int					ft_isspace(int c);
 int					ft_isupper(int c);
+int					ft_isxdigit(int c);
 char				*ft_strndup(const char *s1, size_t n);
 int					ft_abs(int nb);
 size_t				ft_tabintlen(int *tab);

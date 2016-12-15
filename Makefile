@@ -6,13 +6,11 @@
 #    By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/29 16:05:24 by cfatrane          #+#    #+#              #
-#*   Updated: 2016/12/15 18:32:09 by cfatrane         ###   ########.fr       *#
+#*   Updated: 2016/12/15 18:39:49 by cfatrane         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-
-SRC_PATH = ./srcs/
 
 SRC_NAME =	ft_memset.c				\
 			ft_bzero.c				\
@@ -92,8 +90,6 @@ SRC_NAME =	ft_memset.c				\
 			ft_strccpy.c			\
 			ft_strcdup.c			\
 
-SRC = $(addprefix $(SRC_PATH), $(SRC_NAME))
-
 OBJ_PATH = ./objs/
 
 OBJ_NAME = $(SRC_NAME:.c=.o)
@@ -112,7 +108,7 @@ $(NAME): $(OBJ)
 	@ranlib $(NAME)
 	@echo "$(NAME) created"
 
-$(OBJ_PATH)%.o: $(SRC_PATH)%.c
+$(OBJ_PATH)%.o: $(SRC)%.c
 	@mkdir $(OBJ_PATH) 2> /dev/null || true
 	$(CC) $(CFLAGS) -I./includes/ -o $@ -c $<
 

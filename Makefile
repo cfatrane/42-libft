@@ -6,11 +6,13 @@
 #    By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/29 16:05:24 by cfatrane          #+#    #+#              #
-#*   Updated: 2016/12/12 18:17:19 by cfatrane         ###   ########.fr       *#
+#*   Updated: 2016/12/15 18:32:09 by cfatrane         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
+
+SRC_PATH = ./srcs/
 
 SRC_NAME =	ft_memset.c				\
 			ft_bzero.c				\
@@ -90,26 +92,34 @@ SRC_NAME =	ft_memset.c				\
 			ft_strccpy.c			\
 			ft_strcdup.c			\
 
+SRC = $(addprefix $(SRC_PATH), $(SRC_NAME))
+
+OBJ_PATH = ./objs/
+
+OBJ_NAME = $(SRC_NAME:.c=.o)
+
+OBJ = $(addprefix $(OBJ_PATH), $(OBJ_NAME))
+
 CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
-OBJ_NAME = $(SRC_NAME:.c=.o)
-
 all: $(NAME)
 
-%.o : %.c
-	@$(CC) $(CFLAGS) -c $^
-
-$(NAME): $(OBJ_NAME)
+$(NAME): $(OBJ)
 	@echo "Creation of $(NAME) ..."
-	@ar rc $(NAME) $(OBJ_NAME)
+	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 	@echo "$(NAME) created"
 
+$(OBJ_PATH)%.o: $(SRC_PATH)%.c
+	@mkdir $(OBJ_PATH) 2> /dev/null || true
+	$(CC) $(CFLAGS) -I./includes/ -o $@ -c $<
+
 clean:
 	@echo "Removal of .o files of $(NAME) ..."
-	@rm -f $(OBJ_NAME)
+	@rm -f $(OBJ)
+	@rmdir $(OBJ_PATH) 2> /dev/null || true
 	@echo "Files .o deleted\n"
 
 fclean: clean

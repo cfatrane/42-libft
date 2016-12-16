@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 10:45:03 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/12/16 11:26:02 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/12/16 15:33:12 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,9 +100,10 @@ size_t				ft_tabintlen(int *tab);
 int					**ft_createtab(int nblin, int nbcol);
 size_t				ft_lstlen(t_list *list);
 int					ft_count_itoa(int num);
-char				*ft_itoa_base(int num, int base);
+char				*ft_itoa_base(int num, size_t base);
 int					ft_count_words_sep(char const *s, char c);
 size_t				ft_strlen_sep(char const *s, char c);
+char				*ft_strrev(char *str);
 char				*ft_strrev_itoa(char *str);
 void				ft_swap(int *a, int *b);
 int					ft_sqrt(int nb);

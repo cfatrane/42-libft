@@ -6,7 +6,7 @@
 #    By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/29 16:05:24 by cfatrane          #+#    #+#              #
-#*   Updated: 2016/12/16 10:43:24 by cfatrane         ###   ########.fr       *#
+#*   Updated: 2016/12/16 11:34:48 by cfatrane         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -106,16 +106,16 @@ $(NAME): $(OBJ)
 	@echo "Creation of $(NAME) ..."
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
-	@echo "$(NAME) created"
+	@echo "$(NAME) created\n"
 
 $(OBJ_PATH)%.o: $(SRC)%.c
-	@mkdir $(OBJ_PATH) 2 > /dev/null || true
-	@$(CC) $(CFLAGS) -I./includes/ -o $@ -c $<
+	@mkdir $(OBJ_PATH) 2> /dev/null || true
+	$(CC) $(CFLAGS) -o $@ -c $<
 
 clean:
 	@echo "Removal of .o files of $(NAME) ..."
 	@rm -f $(OBJ)
-	@rmdir $(OBJ_PATH) 2 > /dev/null || true
+	@rmdir $(OBJ_PATH) 2> /dev/null || true
 	@echo "Files .o deleted\n"
 
 fclean: clean

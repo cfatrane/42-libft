@@ -6,7 +6,7 @@
 /*   By: cfatrane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/19 10:11:37 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/12/16 16:25:29 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/12/18 12:52:15 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strrev(char *str)
 {
-	unsigned int i;
-	char	*ret;
-	int		j;
+	char		*ret;
+	size_t		i;
+	size_t		j;
 
 	j = 0;
 	i = 0;

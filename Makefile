@@ -6,7 +6,7 @@
 #    By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/29 16:05:24 by cfatrane          #+#    #+#              #
-#*   Updated: 2016/12/16 15:31:39 by cfatrane         ###   ########.fr       *#
+#*   Updated: 2016/12/19 13:29:52 by cfatrane         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,6 +79,7 @@ SRC_NAME =	ft_memset.c				\
 			ft_abs.c				\
 			ft_tabintlen.c			\
 			ft_createtab.c			\
+			ft_nbrlen.c				\
 			ft_lstlen.c				\
 			ft_count_itoa.c			\
 			ft_itoa_base.c			\
@@ -112,7 +113,7 @@ $(NAME): $(OBJ)
 
 $(OBJ_PATH)%.o: $(SRC)%.c
 	@mkdir $(OBJ_PATH) 2> /dev/null || true
-	$(CC) $(CFLAGS) -o $@ -c $<
+	@$(CC) $(CFLAGS) -o $@ -c $<
 
 clean:
 	@echo "Removal of .o files of $(NAME) ..."

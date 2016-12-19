@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/16 11:24:12 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/12/19 11:28:02 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/12/19 14:58:47 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,12 @@ char			*ft_itoa_base(int num, int base)
 
 	if (num == 0)
 		return (ft_strdup("0"));
-	tmp = ft_strnew(16);
-	strcpy(tmp, "0123456789ABCDEF");
+	if (!(tmp = ft_strnew(16)))
+		return (NULL);
+	ft_strcpy(tmp, "0123456789ABCDEF");
 	len = size_tab_base(num, base);
-	str = ft_strnew(len);
+	if (!(str = ft_strnew(len)))
+		return (NULL);
 	i = 1;
 	while (num != 0)
 	{

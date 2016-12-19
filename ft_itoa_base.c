@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/16 11:24:12 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/12/19 14:58:47 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/12/19 19:02:19 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ size_t	size_tab_base(int num, int base)
 	return (len);
 }
 
-char			*ft_itoa_base(int num, int base)
+char	*ft_itoa_base(int num, int base)
 {
 	char	*str;
 	char	*tmp;

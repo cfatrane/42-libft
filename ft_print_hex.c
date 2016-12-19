@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/19 13:42:35 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/12/19 13:47:51 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/12/19 19:02:34 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ void	ft_print_hex(size_t n)
 	str = "0123456789abcdef";
 	if (n >= 16)
 		ft_print_hex(n / 16);
-	ft_putchar (str[n % 16]);
+	ft_putchar(str[n % 16]);
 }

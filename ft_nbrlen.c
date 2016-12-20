@@ -6,29 +6,29 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/19 13:10:19 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/12/19 13:12:58 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/12/20 15:06:33 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_nbrlen(int nbr)
+int	ft_nbrlen(int nb)
 {
-	int		len;
-	size_t	nb;
+	int				len;
+	unsigned int	nbr;
 
 	len = 0;
-	nb = nbr;
-	if (nbr == 0)
+	nbr = nb;
+	if (nb == 0)
 		return (1);
-	if (nbr < 0)
+	if (nb < 0)
 	{
-		nb = -nbr;
+		nbr = -nb;
 		len++;
 	}
-	while (nb > 0)
+	while (nbr > 0)
 	{
-		nb /= 10;
+		nbr /= 10;
 		len++;
 	}
 	return (len);

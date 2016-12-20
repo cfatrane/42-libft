@@ -6,7 +6,7 @@
 #    By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/29 16:05:24 by cfatrane          #+#    #+#              #
-#*   Updated: 2016/12/19 15:03:04 by cfatrane         ###   ########.fr       *#
+#*   Updated: 2016/12/20 17:29:42 by cfatrane         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,9 +81,12 @@ SRC_NAME =	ft_memset.c				\
 			ft_tabintlen.c			\
 			ft_createtab.c			\
 			ft_nbrlen.c				\
+			ft_nbrlen_uns.c			\
+			ft_nbcmp.c				\
 			ft_lstlen.c				\
 			ft_count_itoa.c			\
 			ft_putnbr_base.c		\
+			ft_putnbr_uns.c			\
 			ft_itoa_base.c			\
 			ft_count_words_sep.c	\
 			ft_strlen_sep.c			\

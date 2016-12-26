@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 10:45:03 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/12/26 18:22:51 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/12/26 18:40:13 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,14 @@
 # include <unistd.h>
 
 # define BUFF_SIZE 32
+
+typedef struct		s_gnl
+{
+	char			*text;
+	char			*tempo;
+	struct s_gnl	*next;
+	int				fd;
+}					t_gnl;
 
 void				*ft_memset(void *b, int c, size_t n);
 void				ft_bzero(void *s, size_t n);

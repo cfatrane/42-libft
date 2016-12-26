@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/16 17:02:27 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/12/26 16:51:10 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/12/26 16:52:53 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putnbr_base(int nb, char *base)
 		ft_putchar('-');
 		nb = -nb;
 	}
-	if (nb >= ft_strlen(base))
+	if (nb >= (int)ft_strlen(base))
 	{
 		ft_putnbr_base(nb / ft_strlen(base), base);
 		ft_putnbr_base(nb % ft_strlen(base), base);

@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 10:45:03 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/12/26 14:47:08 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/12/26 17:15:57 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,10 +106,10 @@ int					ft_nbrlen_uns(unsigned long int nb);
 int					ft_nbcmp(int nb1, int nb2);
 size_t				ft_lstlen(t_list *list);
 int					ft_count_itoa(int num);
-void				ft_putnbr_base(int n, char *base);
+void				ft_putnbr_base(int nb, char *base);
 void				ft_putnbr_uns(long int nb);
 char				*ft_itoa_base(int num, int base);
-size_t				size_tab_base(int num, int base);
+int					ft_size_tab_base(size_t num, int base);
 int					ft_count_words_sep(char const *s, char c);
 size_t				ft_strlen_sep(char const *s, char c);
 char				*ft_strrev(char *str);

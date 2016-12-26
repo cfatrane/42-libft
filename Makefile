@@ -6,7 +6,7 @@
 #    By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/29 16:05:24 by cfatrane          #+#    #+#              #
-#*   Updated: 2016/12/20 17:29:42 by cfatrane         ###   ########.fr       *#
+#*   Updated: 2016/12/26 14:47:32 by cfatrane         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,6 +78,7 @@ SRC_NAME =	ft_memset.c				\
 			ft_strndup.c			\
 			ft_abs.c				\
 			ft_print_hex.c			\
+			ft_swap_bits.c			\
 			ft_tabintlen.c			\
 			ft_createtab.c			\
 			ft_nbrlen.c				\

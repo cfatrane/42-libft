@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   ft_swap_bits.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/16 17:02:27 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/12/26 16:51:10 by cfatrane         ###   ########.fr       */
+/*   Created: 2016/12/26 14:09:54 by cfatrane          #+#    #+#             */
+/*   Updated: 2016/12/26 14:46:42 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_base(int nb, char *base)
+unsigned char ft_swap_bits(unsigned char octet)
 {
-	if (nb < 0)
-	{
-		ft_putchar('-');
-		nb = -nb;
-	}
-	if (nb >= ft_strlen(base))
-	{
-		ft_putnbr_base(nb / ft_strlen(base), base);
-		ft_putnbr_base(nb % ft_strlen(base), base);
-	}
-	else
-	{
-		ft_putchar(base[nb]);
-	}
+	return ((octet >> 4) + (octet << 4));
 }

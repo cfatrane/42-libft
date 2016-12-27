@@ -6,18 +6,18 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/20 14:55:41 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/12/20 17:21:38 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/12/27 15:31:21 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_uns(long int nb)
+void	ft_putnbr_uns(unsigned long long int nb)
 {
 	unsigned long int nbr;
 
 	nbr = (unsigned long int)nb;
-	if (nb == 4294967295 || nb < 0)
+	if (nb == 4294967295)
 		ft_putstr("4294967295");
 	else if (nbr >= 10)
 	{

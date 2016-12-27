@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 10:39:19 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/12/20 16:32:57 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/12/27 15:30:50 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_putnbr_fd(int nb, int fd)
 {
-	long int nbr;
+	long long int nbr;
 
-	nbr = (long int)nb;
+	nbr = (long long int)nb;
 	if (nbr < 0)
 	{
 		ft_putchar_fd('-', fd);

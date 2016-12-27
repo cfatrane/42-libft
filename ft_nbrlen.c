@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/19 13:10:19 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/12/20 15:06:33 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/12/27 15:32:38 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_nbrlen(int nb)
 {
 	int				len;
-	unsigned int	nbr;
+	long long int	nbr;
 
 	len = 0;
 	nbr = nb;
@@ -23,7 +23,7 @@ int	ft_nbrlen(int nb)
 		return (1);
 	if (nb < 0)
 	{
-		nbr = -nb;
+		nbr = -nbr;
 		len++;
 	}
 	while (nbr > 0)

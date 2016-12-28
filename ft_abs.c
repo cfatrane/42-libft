@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/06 16:41:39 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/12/26 14:48:42 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/12/27 15:38:35 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,8 @@
 
 int	ft_abs(int nb)
 {
-	return (nb < 0 ? -nb : nb);
+	long long int nbr;
+
+	nbr = nb;
+	return (nbr < 0 ? -nbr : nbr);
 }

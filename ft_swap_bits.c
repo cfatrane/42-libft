@@ -6,13 +6,13 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/26 14:09:54 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/12/26 14:46:42 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/12/27 15:36:31 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned char ft_swap_bits(unsigned char octet)
+unsigned char	ft_swap_bits(unsigned char octet)
 {
 	return ((octet >> 4) + (octet << 4));
 }

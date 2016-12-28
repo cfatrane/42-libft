@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 10:45:03 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/12/27 15:31:08 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/12/28 12:03:41 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,7 @@
 # include <string.h>
 # include <unistd.h>
 
-#include <stdio.h>
-
 # define BUFF_SIZE 32
-
-typedef struct		s_gnl
-{
-	char			*text;
-	char			*tempo;
-	struct s_gnl	*next;
-	int				fd;
-}					t_gnl;
 
 void				*ft_memset(void *b, int c, size_t n);
 void				ft_bzero(void *s, size_t n);
@@ -77,11 +67,11 @@ char				*ft_itoa(int n);
 void				ft_putchar(char c);
 void				ft_putstr(char const *s);
 void				ft_putendl(char const *s);
-void				ft_putnbr(int n);
+void				ft_putnbr(long long int n);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
-void				ft_putnbr_fd(int n, int fd);
+void				ft_putnbr_fd(long long int n, int fd);
 
 typedef struct		s_list
 {
@@ -97,8 +87,6 @@ void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
-int					get_next_line(const int fd, char **line);
-
 int					ft_islower(int c);
 int					ft_isspace(int c);
 int					ft_isupper(int c);
@@ -111,7 +99,7 @@ unsigned char		ft_swap_bits(unsigned char octet);
 
 size_t				ft_tabintlen(int *tab);
 int					**ft_createtab(int nblin, int nbcol);
-int					ft_nbrlen(int nbr);
+int					ft_nbrlen(long long int nbr);
 int					ft_nbrlen_uns(unsigned long long int nb);
 int					ft_nbcmp(int nb1, int nb2);
 size_t				ft_lstlen(t_list *list);

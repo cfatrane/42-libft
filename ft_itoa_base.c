@@ -6,33 +6,26 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/16 11:24:12 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/12/26 17:13:15 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/12/28 17:12:03 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa_base(int num, int base)
+char*ft_itoa_base(unsigned long long int n, char *base)
 {
-	char	*str;
-	char	*tmp;
-	size_t	i;
-	size_t	len;
+	char				*s;
+	unsigned long long	i;
 
-	if (num == 0)
-		return (ft_strdup("0"));
-	if (!(tmp = ft_strnew(16)))
+	i = ft_strlen(base);
+	if (!(s = (char *)malloc(sizeof(char) * 2)))
 		return (NULL);
-	ft_strcpy(tmp, "0123456789ABCDEF");
-	len = ft_size_tab_base(num, base);
-	if (!(str = ft_strnew(len)))
-		return (NULL);
-	i = 1;
-	while (num != 0)
+	if (n >= i)
+		s = ft_strjoin(ft_itoa_base(n / i, base), ft_itoa_base(n % i, base));
+	else if (n < i)
 	{
-		str[len - i] = tmp[num % base];
-		num /= base;
-		i++;
+		s[0] = base[n];
+		s[1] = '\0';
 	}
-	return (str);
+	return (s);
 }

@@ -6,7 +6,7 @@
 #    By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/29 16:05:24 by cfatrane          #+#    #+#              #
-#*   Updated: 2016/12/26 17:13:41 by cfatrane         ###   ########.fr       *#
+#*   Updated: 2016/12/29 17:36:17 by cfatrane         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -97,8 +97,8 @@ SRC_NAME =	ft_memset.c				\
 			ft_swap.c				\
 			ft_sqrt.c				\
 			ft_range.c				\
-			ft_strccpy.c			\
-			ft_strcdup.c			\
+			ft_strcpy_c.c			\
+			ft_strdup_c.c			\
 
 OBJ_PATH = ./objs/
 

@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_size_tab_base.c                                 :+:      :+:    :+:   */
+/*   ft_putstr_n.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/26 17:12:29 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/12/28 17:32:23 by cfatrane         ###   ########.fr       */
+/*   Created: 2016/12/29 17:37:17 by cfatrane          #+#    #+#             */
+/*   Updated: 2016/12/29 17:37:23 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_size_tab_base(size_t n, int base)
+void	ft_putstr_n(const char *s, int n)
 {
-	int	len;
+	int i;
 
-	len = 0;
-	while (n != 0)
+	i = 0;
+	while (i < n && s[i] != '\0')
 	{
-		n /= base;
-		len++;
+		ft_putchar(s[i]);
+		i++;
 	}
-	return (len);
 }

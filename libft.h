@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 10:45:03 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/12/27 16:45:55 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/12/29 17:37:52 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,10 +116,10 @@ int					ft_nbrlen_uns(unsigned long long int nb);
 int					ft_nbcmp(int nb1, int nb2);
 size_t				ft_lstlen(t_list *list);
 int					ft_count_itoa(int num);
-void				ft_putnbr_base(size_t nb, char *base);
-void				ft_putnbr_uns(unsigned long long int nb);
-char				*ft_itoa_base(int num, int base);
-int					ft_size_tab_base(size_t num, int base);
+void				ft_putnbr_base(unsigned long long int n, char *base);
+void				ft_putnbr_uns(unsigned long long int n);
+char				*ft_itoa_base(unsigned long long int n, char *base);
+int					ft_size_tab_base(size_t n, int base);
 int					ft_count_words_sep(char const *s, char c);
 size_t				ft_strlen_sep(char const *s, char c);
 char				*ft_strrev(char *str);
@@ -127,7 +127,8 @@ char				*ft_strrev_itoa(char *str);
 void				ft_swap(int *a, int *b);
 int					ft_sqrt(int nb);
 int					*ft_range(int min, int max);
-char				*ft_strccpy(char *dst, const char *src, char c);
-char				*ft_strcdup(const char *s1, char c);
+char				*ft_strcpy_c(char *dst, const char *src, char c);
+char				*ft_strdup_c(const char *s1, char c);
+void				ft_putstr_n(const char *s, int n);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 10:41:55 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/11/22 10:41:59 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/12/29 18:35:44 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,10 @@ size_t	ft_strlen(const char *s)
 	size_t i;
 
 	i = 0;
-	while (s[i] != '\0')
-		i++;
+	if (s)
+	{
+		while (s[i] != '\0')
+			i++;
+	}
 	return (i);
 }

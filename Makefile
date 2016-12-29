@@ -6,7 +6,7 @@
 #    By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/29 16:05:24 by cfatrane          #+#    #+#              #
-#*   Updated: 2016/12/29 17:44:30 by cfatrane         ###   ########.fr       *#
+#*   Updated: 2016/12/29 20:10:06 by cfatrane         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -100,6 +100,7 @@ SRC_NAME =	ft_memset.c				\
 			ft_strcpy_c.c			\
 			ft_strdup_c.c			\
 			ft_putstr_n.c			\
+			ft_putnbr_n.c			\
 
 OBJ_PATH = ./objs/
 

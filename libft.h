@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 10:45:03 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/12/29 17:37:52 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/12/29 20:09:49 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,5 +130,6 @@ int					*ft_range(int min, int max);
 char				*ft_strcpy_c(char *dst, const char *src, char c);
 char				*ft_strdup_c(const char *s1, char c);
 void				ft_putstr_n(const char *s, int n);
+void				ft_putnbr_n(long long int nb, int n);
 
 #endif

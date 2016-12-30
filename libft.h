@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 10:45:03 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/12/29 20:09:49 by cfatrane         ###   ########.fr       */
+/*   Updated: 2016/12/30 18:54:43 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,6 +108,7 @@ int					ft_abs(int nb);
 
 void				ft_print_hex(size_t n);
 unsigned char		ft_swap_bits(unsigned char octet);
+void				ft_print_bits(unsigned char octet);
 
 size_t				ft_tabintlen(int *tab);
 int					**ft_createtab(int nblin, int nbcol);

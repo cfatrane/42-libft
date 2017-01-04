@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 10:45:03 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/12/30 18:54:43 by cfatrane         ###   ########.fr       */
+/*   Updated: 2017/01/03 17:25:32 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,7 +112,9 @@ void				ft_print_bits(unsigned char octet);
 
 size_t				ft_tabintlen(int *tab);
 int					**ft_createtab(int nblin, int nbcol);
-int					ft_nbrlen(long long int nbr);
+int					ft_nbrlen(long long int nb);
+int					ft_nbrlen_octal(unsigned long long int nb);
+int					ft_nbrlen_hexa(unsigned long long int nb);
 int					ft_nbrlen_uns(unsigned long long int nb);
 int					ft_nbcmp(int nb1, int nb2);
 size_t				ft_lstlen(t_list *list);

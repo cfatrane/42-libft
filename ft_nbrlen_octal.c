@@ -1,37 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_bits.c                                    :+:      :+:    :+:   */
+/*   ft_nbrlen_octal.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/30 18:53:46 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/02 20:08:50 by cfatrane         ###   ########.fr       */
+/*   Created: 2017/01/03 17:14:08 by cfatrane          #+#    #+#             */
+/*   Updated: 2017/01/03 17:20:52 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	print_bits(unsigned char octet)
+int	ft_nbrlen_octal(unsigned long long int nb)
 {
-	int				i;
-	unsigned char	c;
+	int len;
 
-	i = 128;
-	while (i > 0)
-	{
-		if (octet < i)
-		{
-			c = '0';
-			write(1, &c, 1);
-			i /= 2;
-		}
-		else
-		{
-			c = '1';
-			write(1, &c, 1);
-			octet = octet - i;
-			i /= 2;
-		}
-	}
+	len = 1;
+	while (nb /= 8)
+		len++;
+	return (len);
 }

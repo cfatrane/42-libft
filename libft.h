@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 10:45:03 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/03 17:25:32 by cfatrane         ###   ########.fr       */
+/*   Updated: 2017/01/04 15:00:01 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,7 +116,8 @@ int					ft_nbrlen(long long int nb);
 int					ft_nbrlen_octal(unsigned long long int nb);
 int					ft_nbrlen_hexa(unsigned long long int nb);
 int					ft_nbrlen_uns(unsigned long long int nb);
-int					ft_nbcmp(int nb1, int nb2);
+int					ft_nbcmp_min(int nb1, int nb2);
+int					ft_nbcmp_max(int nb1, int nb2);
 size_t				ft_lstlen(t_list *list);
 int					ft_count_itoa(int num);
 void				ft_putnbr_base(unsigned long long int n, char *base);

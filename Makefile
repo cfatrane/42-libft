@@ -6,7 +6,7 @@
 #    By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/29 16:05:24 by cfatrane          #+#    #+#              #
-#*   Updated: 2017/01/03 17:25:47 by cfatrane         ###   ########.fr       *#
+#*   Updated: 2017/01/04 14:59:56 by cfatrane         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -86,7 +86,8 @@ SRC_NAME =	ft_memset.c				\
 			ft_nbrlen_octal.c		\
 			ft_nbrlen_hexa.c		\
 			ft_nbrlen_uns.c			\
-			ft_nbcmp.c				\
+			ft_nbcmp_min.c			\
+			ft_nbcmp_max.c			\
 			ft_lstlen.c				\
 			ft_count_itoa.c			\
 			ft_putnbr_base.c		\

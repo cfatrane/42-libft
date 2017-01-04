@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/04 15:00:22 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/04 15:00:28 by cfatrane         ###   ########.fr       */
+/*   Updated: 2017/01/04 15:04:18 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_nbcmp_min(int nb1, int nb2)
 {
-	return (nb1 > nb2 ? nb1 : nb2);
+	return (nb1 < nb2 ? nb1 : nb2);
 }

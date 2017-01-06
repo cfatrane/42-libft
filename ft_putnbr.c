@@ -6,13 +6,13 @@
 /*   By: cfatrane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 13:55:26 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/12/28 13:35:09 by cfatrane         ###   ########.fr       */
+/*   Updated: 2017/01/05 12:53:18 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(long long int n)
+void	ft_putnbr(int n)
 {
 	ft_putnbr_fd(n, 1);
 }

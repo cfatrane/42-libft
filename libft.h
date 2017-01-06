@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 10:45:03 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/04 15:00:01 by cfatrane         ###   ########.fr       */
+/*   Updated: 2017/01/05 13:15:19 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+# include <limits.h>
 
 # include <stdio.h>
 
@@ -77,11 +78,11 @@ char				*ft_itoa(int n);
 void				ft_putchar(char c);
 void				ft_putstr(char const *s);
 void				ft_putendl(char const *s);
-void				ft_putnbr(long long int n);
+void				ft_putnbr(int n);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
-void				ft_putnbr_fd(long long int n, int fd);
+void				ft_putnbr_fd(int n, int fd);
 
 typedef struct		s_list
 {
@@ -121,6 +122,7 @@ int					ft_nbcmp_max(int nb1, int nb2);
 size_t				ft_lstlen(t_list *list);
 int					ft_count_itoa(int num);
 void				ft_putnbr_base(unsigned long long int n, char *base);
+void				ft_putnbr_lng(long long int n);
 void				ft_putnbr_uns(unsigned long long int n);
 char				*ft_itoa_base(unsigned long long int n, char *base);
 int					ft_size_tab_base(size_t n, int base);

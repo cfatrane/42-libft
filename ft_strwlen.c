@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/09 16:16:21 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/09 16:20:02 by cfatrane         ###   ########.fr       */
+/*   Updated: 2017/01/09 19:00:19 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ size_t	ft_strwlen(wchar_t *s)
 	j = 0;
 	while (s[i] != '\0')
 	{
-		if ((int)s[i] < 0x80)
+		if ((int)s[i] < 0x7F)
 			j += 1;
-		else if ((int)s[i] < 0x800)
+		else if ((int)s[i] < 0x7FF)
 			j += 2;
-		else if ((int)s[i] < 0x10000)
+		else if ((int)s[i] < 0xFFFF)
 			j += 3;
-		else
+		else if ((int)s[i] < 0x10FFFF)
 			j += 4;
 		i++;
 	}

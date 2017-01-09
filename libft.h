@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 10:45:03 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/09 18:17:36 by cfatrane         ###   ########.fr       */
+/*   Updated: 2017/01/09 18:47:20 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,7 @@ int					ft_isxdigit(int c);
 char				*ft_strndup(const char *s1, size_t n);
 int					ft_abs(int nb);
 void				ft_putwchar(wchar_t c);
-void				ft_putwstr(wchar_t *str);
+void				ft_putwstr(wchar_t const *str);
 void				ft_putwstr_n(wchar_t *str, int n);
 int					ft_strwcharlen(wchar_t c);
 size_t				ft_strwlen(wchar_t *s);

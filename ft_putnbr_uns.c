@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/20 14:55:41 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/05 13:36:37 by cfatrane         ###   ########.fr       */
+/*   Updated: 2017/01/09 20:47:09 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	ft_putnbr_uns(unsigned long long int n)
 {
-//	if (n == 4294967295)
-//		ft_putstr("4294967295");
 	if (n >= 10)
 	{
 		ft_putnbr_uns(n / 10);

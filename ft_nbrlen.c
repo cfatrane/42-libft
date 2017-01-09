@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/19 13:10:19 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/12/28 14:58:32 by cfatrane         ###   ########.fr       */
+/*   Updated: 2017/01/06 18:11:55 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int	ft_nbrlen(long long int nb)
 {
 	int len;
 
+	if (nb <= LONG_MIN)
+		return (20);
 	len = 0;
 	if (nb == 0)
 		return (1);

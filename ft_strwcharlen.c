@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_lng.c                                    :+:      :+:    :+:   */
+/*   ft_strwcharlen.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/05 12:53:51 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/08 12:07:35 by cfatrane         ###   ########.fr       */
+/*   Created: 2017/01/09 17:28:12 by cfatrane          #+#    #+#             */
+/*   Updated: 2017/01/09 17:30:22 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_lng(long long int n)
+int	ft_strwcharlen(wchar_t s)
 {
-	if (n <= LONG_MIN)
-	{
-		ft_putstr("-9223372036854775808");
-	return ;
-	}
-	if (n < 0)
-	{
-		ft_putchar('-');
-		n = -n;
-	}
-	if (n > 9)
-		ft_putnbr_lng(n / 10);
-	ft_putchar(n % 10 + '0');
+	int j;
+
+	j = 0;
+	if ((int)s < 0x80)
+		j += 1;
+	else if ((int)s < 0x800)
+		j += 2;
+	else if ((int)s < 0x10000)
+		j += 3;
+	else
+		j += 4;
+	return (j);
 }

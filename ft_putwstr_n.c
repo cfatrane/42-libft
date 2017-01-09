@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_lng.c                                    :+:      :+:    :+:   */
+/*   ft_putwstr_n.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/05 12:53:51 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/08 12:07:35 by cfatrane         ###   ########.fr       */
+/*   Created: 2017/01/09 18:17:58 by cfatrane          #+#    #+#             */
+/*   Updated: 2017/01/09 18:19:52 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_lng(long long int n)
+void	ft_putwstr_n(wchar_t *str, int n)
 {
-	if (n <= LONG_MIN)
+	int i;
+
+	i = 0;
+	while (i < n && str[i])
 	{
-		ft_putstr("-9223372036854775808");
-	return ;
+		ft_putwchar(str[i]);
+		i++;
 	}
-	if (n < 0)
-	{
-		ft_putchar('-');
-		n = -n;
-	}
-	if (n > 9)
-		ft_putnbr_lng(n / 10);
-	ft_putchar(n % 10 + '0');
 }

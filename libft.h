@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 10:45:03 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/09 18:47:20 by cfatrane         ###   ########.fr       */
+/*   Updated: 2017/01/10 15:38:41 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,8 +110,9 @@ int					ft_abs(int nb);
 void				ft_putwchar(wchar_t c);
 void				ft_putwstr(wchar_t const *str);
 void				ft_putwstr_n(wchar_t *str, int n);
-int					ft_strwcharlen(wchar_t c);
-size_t				ft_strwlen(wchar_t *s);
+int					ft_wcharlen(wchar_t c);
+size_t				ft_strwlen(const wchar_t *s);
+size_t				ft_strwlen_n(const wchar_t *s, int n);
 
 void				ft_print_hex(size_t n);
 unsigned char		ft_swap_bits(unsigned char octet);

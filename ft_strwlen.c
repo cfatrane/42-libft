@@ -6,13 +6,13 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/09 16:16:21 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/09 19:00:19 by cfatrane         ###   ########.fr       */
+/*   Updated: 2017/01/10 11:32:32 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strwlen(wchar_t *s)
+size_t	ft_strwlen(const wchar_t *s)
 {
 	int	i;
 	int	j;

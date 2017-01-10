@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putwstr_n.c                                     :+:      :+:    :+:   */
+/*   ft_wcharlen.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/09 18:17:58 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/10 15:42:41 by cfatrane         ###   ########.fr       */
+/*   Created: 2017/01/10 11:28:03 by cfatrane          #+#    #+#             */
+/*   Updated: 2017/01/10 11:28:59 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putwstr_n(wchar_t *s, int n)
+int	ft_wcharlen(wchar_t s)
 {
-	if (s && n != 0)
-	{
-		while (*s != '\0' && n > 0)
-		{
-			if (n >= ft_wcharlen(*s))
-				ft_putwchar(*s);
-			n -= ft_wcharlen(*s);
-			s++;
-		}
-	}
+	int j;
+
+	j = 0;
+	if ((int)s < 0x80)
+		j += 1;
+	else if ((int)s < 0x800)
+		j += 2;
+	else if ((int)s < 0x10000)
+		j += 3;
+	else
+		j += 4;
+	return (j);
 }

@@ -6,7 +6,7 @@
 #    By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/29 16:05:24 by cfatrane          #+#    #+#              #
-#*   Updated: 2017/01/16 15:06:34 by cfatrane         ###   ########.fr       *#
+#*   Updated: 2017/01/16 15:53:57 by cfatrane         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -125,7 +125,7 @@ OBJ_NAME = $(SRC_NAME:.c=.o)
 
 OBJ = $(addprefix $(OBJ_PATH), $(OBJ_NAME))
 
-CC = gcc
+CC = gcc $(CFLAGS)
 
 CFLAGS = -Wall -Wextra -Werror
 
@@ -137,9 +137,9 @@ $(NAME): $(OBJ)
 	@ranlib $(NAME)
 	@echo "$(NAME) created\n"
 
-$(OBJ_PATH)%.o: $(SRC)%.c
+$(OBJ_PATH)%.o: %.c
 	@mkdir $(OBJ_PATH) 2> /dev/null || true
-	@$(CC) $(CFLAGS) -o $@ -c $<
+	@$(CC) -o $@ -c $<
 
 clean:
 	@echo "Removal of .o files of $(NAME) ..."

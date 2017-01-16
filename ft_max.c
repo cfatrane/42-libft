@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/14 22:31:38 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/14 22:33:55 by cfatrane         ###   ########.fr       */
+/*   Updated: 2017/01/14 22:53:23 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,13 @@ int	ft_max(int *tab, unsigned int len)
 
 	if (len == 0)
 		return (0);
-	i = 0;
-	max = 0;
+	i = 1;
+	max = *tab;
 	while (i != len)
 	{
-		if (tab[i] > max)
-		{
-			max = tab[i];
-			i = 0;
-		}
-		else
-			i++;
+		if (max < *(tab + i))
+			max = *(tab + i);
+		i++;
 	}
 	return (max);
 }

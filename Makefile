@@ -6,7 +6,7 @@
 #    By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/29 16:05:24 by cfatrane          #+#    #+#              #
-#*   Updated: 2017/01/14 22:35:05 by cfatrane         ###   ########.fr       *#
+#*   Updated: 2017/01/16 15:06:34 by cfatrane         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,6 +75,9 @@ SRC_NAME =	ft_memset.c				\
 			ft_isupper.c			\
 			ft_isspace.c			\
 			ft_isxdigit.c			\
+			ft_isupphexa.c			\
+			ft_islowhexa.c			\
+			ft_isalhexa.c			\
 			ft_strndup.c			\
 			ft_abs.c				\
 			ft_putwchar.c			\
@@ -114,6 +117,7 @@ SRC_NAME =	ft_memset.c				\
 			ft_strdup_c.c			\
 			ft_putstr_n.c			\
 			ft_putnbr_n.c			\
+			ft_hex_to_dec.c			\
 
 OBJ_PATH = ./objs/
 

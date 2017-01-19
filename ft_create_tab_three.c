@@ -1,32 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_createtab.c                                     :+:      :+:    :+:   */
+/*   ft_create_tab_three.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/05 11:44:59 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/12/05 16:21:04 by cfatrane         ###   ########.fr       */
+/*   Created: 2017/01/18 13:34:16 by cfatrane          #+#    #+#             */
+/*   Updated: 2017/01/18 15:58:17 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		**ft_createtab(int nblin, int nbcol)
+int	***ft_create_tab_three(int x, int y, int z)
 {
-	int i;
-	int **tab;
-	int *tab2;
+	int	i;
+	int j;
+	int	***tab;
 
-	i = 0;
-	if (!(tab = (int**)malloc(sizeof(tab) * nblin)))
+	i = -1;
+	if (!(tab = (int***)malloc(sizeof(*tab) * y)))
 		return (NULL);
-	if (!(tab2 = (int*)malloc(sizeof(tab2) * (nbcol * nblin))))
-		return (NULL);
-	while (i < nblin)
+	while (++i < y)
 	{
-		tab[i] = &tab2[i * nbcol];
-		i++;
+		if (!(tab[i] = (int**)malloc(sizeof(**tab) * x)))
+			return (NULL);
+	}
+	i = -1;
+	while (++i < y)
+	{
+		j = -1;
+		while (++j < x)
+		{
+			if (!(tab[i][j] = (int*)malloc(sizeof(***tab) * z)))
+				return (NULL);
+		}
 	}
 	return (tab);
 }

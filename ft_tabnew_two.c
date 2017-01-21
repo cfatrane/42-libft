@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_create_tab_two.c                                :+:      :+:    :+:   */
+/*   ft_tabnew_two.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/18 13:34:50 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/18 13:43:24 by cfatrane         ###   ########.fr       */
+/*   Created: 2017/01/21 14:22:42 by cfatrane          #+#    #+#             */
+/*   Updated: 2017/01/21 14:22:50 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		**ft_create_tab_two(int x, int y)
+int		**ft_tabnew_two(int x, int y)
 {
 	int i;
 	int **tab;

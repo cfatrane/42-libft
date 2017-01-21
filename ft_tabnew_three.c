@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_create_tab_three.c                              :+:      :+:    :+:   */
+/*   ft_tabnew_three.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/18 13:34:16 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/18 15:58:17 by cfatrane         ###   ########.fr       */
+/*   Created: 2017/01/21 14:24:48 by cfatrane          #+#    #+#             */
+/*   Updated: 2017/01/21 14:24:55 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	***ft_create_tab_three(int x, int y, int z)
+int	***ft_tabnew_three(int x, int y, int z)
 {
 	int	i;
 	int j;

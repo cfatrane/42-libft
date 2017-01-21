@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 10:45:03 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/21 12:33:21 by cfatrane         ###   ########.fr       */
+/*   Updated: 2017/01/21 12:52:30 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 
 # include <stdio.h>
 
-# define BUFF_SIZE 1
+# define BUFF_SIZE 32
 
 typedef struct		s_gnl
 {

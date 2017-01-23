@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 10:33:45 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/23 11:54:17 by cfatrane         ###   ########.fr       */
+/*   Updated: 2017/01/23 12:06:34 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,19 +27,19 @@ static int	count_size(int n)
 	return (i);
 }
 
-char		*ft_itoa(int n)
+char		*ft_itoa(int num)
 {
-	char	*dst;
-	int		i;
-	int		c;
+	char		*dst;
+	int			count;
+	int			i;
+	long int	n;
 
-	c = count_size(n);
+	n = num;
+	count = count_size(n);
 	i = 0;
-	if (n == -2147483648)
-		return ((dst = ft_strdup("-2147483648")));
-	if (n < 0 || c == 0)
-		c++;
-	if (!(dst = ft_strnew(c)))
+	if (n < 0 || count == 0)
+		count++;
+	if (!(dst = ft_strnew(count)))
 		return (NULL);
 	if (n < 0)
 	{
@@ -47,10 +47,10 @@ char		*ft_itoa(int n)
 		dst[0] = '-';
 		i++;
 	}
-	while (c > i)
+	while (count > i)
 	{
-		c--;
-		dst[c] = (n % 10) + '0';
+		count--;
+		dst[count] = (n % 10) + '0';
 		n /= 10;
 	}
 	return (dst);

@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 10:45:03 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/21 14:24:07 by cfatrane         ###   ########.fr       */
+/*   Updated: 2017/01/23 11:53:58 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,7 +135,6 @@ int					ft_nbrlen_uns(unsigned long long int nb);
 int					ft_nbcmp_min(int nb1, int nb2);
 int					ft_nbcmp_max(int nb1, int nb2);
 size_t				ft_lstlen(t_list *list);
-int					ft_count_itoa(int num);
 void				ft_putnbr_base(unsigned long long int n, char *base);
 void				ft_putnbr_lng(long long int n);
 void				ft_putnbr_uns(unsigned long long int n);
@@ -144,7 +143,6 @@ int					ft_size_tab_base(size_t n, int base);
 int					ft_count_words_sep(char const *s, char c);
 size_t				ft_strlen_sep(char const *s, char c);
 char				*ft_strrev(char *str);
-char				*ft_strrev_itoa(char *str);
 void				ft_swap(int *a, int *b);
 int					ft_sqrt(int nb);
 int					*ft_range(int min, int max);

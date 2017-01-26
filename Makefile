@@ -6,11 +6,17 @@
 #    By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/29 16:05:24 by cfatrane          #+#    #+#              #
-#*   Updated: 2017/01/23 11:53:46 by cfatrane         ###   ########.fr       *#
+#*   Updated: 2017/01/26 13:06:27 by cfatrane         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
+
+# Path
+
+OBJ_PATH = ./objs/
+
+# Name
 
 SRC_NAME =	ft_memset.c				\
 			ft_bzero.c				\
@@ -120,38 +126,42 @@ SRC_NAME =	ft_memset.c				\
 			ft_putnbr_n.c			\
 			ft_hex_to_dec.c			\
 
-OBJ_PATH = ./objs/
-
 OBJ_NAME = $(SRC_NAME:.c=.o)
 
+# Files
+
 OBJ = $(addprefix $(OBJ_PATH), $(OBJ_NAME))
+
+# Flags
 
 CC = gcc $(CFLAGS)
 
 CFLAGS = -Wall -Wextra -Werror
 
+# Rules
+
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@echo "Creation of $(NAME) ..."
+	@echo "\033[34mCreation of $(NAME) ...\033[0m"
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
-	@echo "$(NAME) created\n"
+	@echo "\033[32m$(NAME) created\n\033[0m"
 
 $(OBJ_PATH)%.o: %.c
 	@mkdir $(OBJ_PATH) 2> /dev/null || true
 	@$(CC) -o $@ -c $<
 
 clean:
-	@echo "Removal of .o files of $(NAME) ..."
+	@echo "\033[33mRemoval of .o files of $(NAME) ...\033[0m"
 	@rm -f $(OBJ)
 	@rmdir $(OBJ_PATH) 2> /dev/null || true
-	@echo "Files .o deleted\n"
+	@echo "\033[31mFiles .o deleted\n\033[0m"
 
 fclean: clean
-	@echo "Removal of $(NAME)..."
+	@echo "\033[33mRemoval of $(NAME)...\033[0m"
 	@rm -f $(NAME)
-	@echo "Binary $(NAME) deleted\n"
+	@echo "\033[31mBinary $(NAME) deleted\n\033[0m"
 
 re: fclean all
 

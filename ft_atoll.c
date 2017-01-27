@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atoll.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/22 10:32:00 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/27 19:47:25 by cfatrane         ###   ########.fr       */
+/*   Created: 2017/01/27 20:01:17 by cfatrane          #+#    #+#             */
+/*   Updated: 2017/01/27 20:17:53 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+long long	ft_atoll(const char *str)
 {
-	long int nb;
-	int sign;
+	long long int	nb;
+	int				sign;
 
 	nb = 0;
 	sign = 1;

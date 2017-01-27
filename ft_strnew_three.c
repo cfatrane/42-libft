@@ -6,13 +6,13 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/20 11:50:06 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/20 14:08:43 by cfatrane         ###   ########.fr       */
+/*   Updated: 2017/01/27 20:13:15 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	***ft_strnew_three(int x, int y, int z)
+char	***ft_strnew_three(size_t x, size_t y, size_t z)
 {
 	int		i;
 	int		j;

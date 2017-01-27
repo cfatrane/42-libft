@@ -6,9 +6,11 @@
 #    By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/29 16:05:24 by cfatrane          #+#    #+#              #
-#*   Updated: 2017/01/26 13:06:27 by cfatrane         ###   ########.fr       *#
+#*   Updated: 2017/01/27 20:25:54 by cfatrane         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
+
+# Binary
 
 NAME = libft.a
 
@@ -25,10 +27,15 @@ SRC_NAME =	ft_memset.c				\
 			ft_memmove.c			\
 			ft_memchr.c				\
 			ft_memcmp.c				\
+			ft_memalloc.c			\
+			ft_memdel.c				\
 			ft_strlen.c				\
 			ft_strdup.c				\
+			ft_strndup.c			\
+			ft_strdup_c.c			\
 			ft_strcpy.c				\
 			ft_strncpy.c			\
+			ft_strcpy_c.c			\
 			ft_strcat.c				\
 			ft_strncat.c			\
 			ft_strlcat.c			\
@@ -39,15 +46,8 @@ SRC_NAME =	ft_memset.c				\
 			ft_strcmp.c				\
 			ft_strncmp.c			\
 			ft_atoi.c				\
-			ft_isalpha.c			\
-			ft_isdigit.c			\
-			ft_isalnum.c			\
-			ft_isascii.c			\
-			ft_isprint.c			\
-			ft_tolower.c			\
-			ft_toupper.c			\
-			ft_memalloc.c			\
-			ft_memdel.c				\
+			ft_atol.c				\
+			ft_atoll.c				\
 			ft_strnew.c				\
 			ft_strdel.c				\
 			ft_strclr.c				\
@@ -62,29 +62,42 @@ SRC_NAME =	ft_memset.c				\
 			ft_strtrim.c			\
 			ft_strsplit.c			\
 			ft_itoa.c				\
+			ft_itoa_base.c			\
 			ft_putchar.c			\
-			ft_putstr.c				\
-			ft_putendl.c			\
-			ft_putnbr.c				\
 			ft_putchar_fd.c			\
+			ft_putstr.c				\
+			ft_putstr_n.c			\
 			ft_putstr_fd.c			\
+			ft_putendl.c			\
 			ft_putendl_fd.c			\
+			ft_putnbr.c				\
 			ft_putnbr_fd.c			\
+			ft_putnbr_n.c			\
+			ft_putnbr_base.c		\
+			ft_putnbr_lng.c			\
+			ft_putnbr_uns.c			\
+			ft_isalpha.c			\
+			ft_isdigit.c			\
+			ft_isalnum.c			\
+			ft_isascii.c			\
+			ft_isprint.c			\
+			ft_tolower.c			\
+			ft_toupper.c			\
+			ft_islower.c			\
+			ft_isspace.c			\
+			ft_isupper.c			\
+			ft_isxdigit.c			\
+			ft_isupphexa.c			\
+			ft_islowhexa.c			\
+			ft_isalhexa.c			\
 			ft_lstnew.c				\
 			ft_lstdelone.c			\
 			ft_lstdel.c				\
 			ft_lstadd.c				\
 			ft_lstiter.c			\
 			ft_lstmap.c				\
+			ft_lstlen.c				\
 			get_next_line.c			\
-			ft_islower.c			\
-			ft_isupper.c			\
-			ft_isspace.c			\
-			ft_isxdigit.c			\
-			ft_isupphexa.c			\
-			ft_islowhexa.c			\
-			ft_isalhexa.c			\
-			ft_strndup.c			\
 			ft_abs.c				\
 			ft_putwchar.c			\
 			ft_putwstr.c			\
@@ -99,6 +112,7 @@ SRC_NAME =	ft_memset.c				\
 			ft_tabintlen.c			\
 			ft_strnew_two.c			\
 			ft_strnew_three.c		\
+			ft_tabnew.c				\
 			ft_tabnew_two.c			\
 			ft_tabnew_three.c		\
 			ft_nbrlen.c				\
@@ -108,11 +122,6 @@ SRC_NAME =	ft_memset.c				\
 			ft_nbrlen_uns.c			\
 			ft_nbcmp_min.c			\
 			ft_nbcmp_max.c			\
-			ft_lstlen.c				\
-			ft_putnbr_base.c		\
-			ft_putnbr_lng.c			\
-			ft_putnbr_uns.c			\
-			ft_itoa_base.c			\
 			ft_size_tab_base.c		\
 			ft_count_words_sep.c	\
 			ft_strlen_sep.c			\
@@ -120,10 +129,6 @@ SRC_NAME =	ft_memset.c				\
 			ft_swap.c				\
 			ft_sqrt.c				\
 			ft_range.c				\
-			ft_strcpy_c.c			\
-			ft_strdup_c.c			\
-			ft_putstr_n.c			\
-			ft_putnbr_n.c			\
 			ft_hex_to_dec.c			\
 
 OBJ_NAME = $(SRC_NAME:.c=.o)

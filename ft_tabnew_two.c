@@ -6,17 +6,17 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/21 14:22:42 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/21 14:22:50 by cfatrane         ###   ########.fr       */
+/*   Updated: 2017/01/28 11:53:50 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		**ft_tabnew_two(int x, int y)
+int		**ft_tabnew_two(size_t x, size_t y)
 {
-	int i;
-	int **tab;
-	int *tab2;
+	size_t	i;
+	int		**tab;
+	int		*tab2;
 
 	i = 0;
 	if (!(tab = (int**)malloc(sizeof(tab) * y)))

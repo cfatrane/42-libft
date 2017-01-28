@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew_two.c                                    :+:      :+:    :+:   */
+/*   ft_list_reverse_fun.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/20 11:36:53 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/28 14:35:01 by cfatrane         ###   ########.fr       */
+/*   Created: 2017/01/28 19:37:32 by cfatrane          #+#    #+#             */
+/*   Updated: 2017/01/28 19:44:36 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_strnew_two(size_t x, size_t y)
+void	ft_list_reverse_fun(t_list *begin_list)
 {
-	char	**tab;
-	char	*tableau2;
-	size_t	i;
+	t_list	*list;
+	t_list	*last;
+	t_list	*tmp;
 
-	i = 0;
-	tab = (char **)malloc(sizeof(char *) * y);
-	tableau2 = (char *)malloc(sizeof(char) * x * y);
-	while (i < y)
+	list = begin_list;
+	last = NULL;
+	if (!(list))
+		list = NULL;
+	while (list)
 	{
-		tab[i] = &tableau2[i * x];
-		i++;
+		tmp = list->next;
+		list->next = last;
+		last = list;
+		list = tmp;
 	}
-	return (tab);
+	begin_list = last;
 }

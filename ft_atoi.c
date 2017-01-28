@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 10:32:00 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/27 19:47:25 by cfatrane         ###   ########.fr       */
+/*   Updated: 2017/01/27 20:30:07 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_atoi(const char *str)
 {
-	long int nb;
-	int sign;
+	int	nb;
+	int	sign;
 
 	nb = 0;
 	sign = 1;

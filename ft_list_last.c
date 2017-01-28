@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew_two.c                                    :+:      :+:    :+:   */
+/*   ft_list_last.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/20 11:36:53 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/28 14:35:01 by cfatrane         ###   ########.fr       */
+/*   Created: 2017/01/28 18:41:30 by cfatrane          #+#    #+#             */
+/*   Updated: 2017/01/28 18:44:03 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_strnew_two(size_t x, size_t y)
+t_list	*ft_list_last(t_list *begin_list)
 {
-	char	**tab;
-	char	*tableau2;
-	size_t	i;
-
-	i = 0;
-	tab = (char **)malloc(sizeof(char *) * y);
-	tableau2 = (char *)malloc(sizeof(char) * x * y);
-	while (i < y)
-	{
-		tab[i] = &tableau2[i * x];
-		i++;
-	}
-	return (tab);
+	if (begin_list == NULL)
+		return (NULL);
+	if (begin_list->next)
+		return (ft_list_last(begin_list->next));
+	else
+		return (begin_list);
 }

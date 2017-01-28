@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew_two.c                                    :+:      :+:    :+:   */
+/*   ft_nbrcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/20 11:36:53 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/28 14:35:01 by cfatrane         ###   ########.fr       */
+/*   Created: 2017/01/28 12:09:46 by cfatrane          #+#    #+#             */
+/*   Updated: 2017/01/28 12:11:31 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_strnew_two(size_t x, size_t y)
+int	ft_nbrcmp(size_t nb1, size_t nb2)
 {
-	char	**tab;
-	char	*tableau2;
-	size_t	i;
-
-	i = 0;
-	tab = (char **)malloc(sizeof(char *) * y);
-	tableau2 = (char *)malloc(sizeof(char) * x * y);
-	while (i < y)
-	{
-		tab[i] = &tableau2[i * x];
-		i++;
-	}
-	return (tab);
+	if (nb1 != nb2)
+		return (-1);
+	return (0);
 }

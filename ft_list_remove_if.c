@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew_two.c                                    :+:      :+:    :+:   */
+/*   ft_list_remove_if.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/20 11:36:53 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/28 14:35:01 by cfatrane         ###   ########.fr       */
+/*   Created: 2017/01/22 18:46:40 by cfatrane          #+#    #+#             */
+/*   Updated: 2017/01/28 19:27:59 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_strnew_two(size_t x, size_t y)
+void	ft_list_remove_if(t_list **begin_list, void *content_ref, int (*cmp)())
 {
-	char	**tab;
-	char	*tableau2;
-	size_t	i;
+	t_list	*to_free;
 
-	i = 0;
-	tab = (char **)malloc(sizeof(char *) * y);
-	tableau2 = (char *)malloc(sizeof(char) * x * y);
-	while (i < y)
+	if (*begin_list)
 	{
-		tab[i] = &tableau2[i * x];
-		i++;
+		if (cmp((*begin_list)->content, content_ref) == 0)
+		{
+			to_free = *begin_list;
+			*begin_list = (*begin_list)->next;
+			free (to_free);
+			ft_list_remove_if(begin_list, content_ref, cmp);
+		}
+		else
+			ft_list_remove_if(&(*begin_list)->next, content_ref, cmp);
 	}
-	return (tab);
 }

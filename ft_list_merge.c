@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew_two.c                                    :+:      :+:    :+:   */
+/*   ft_list_merge.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/20 11:36:53 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/28 14:35:01 by cfatrane         ###   ########.fr       */
+/*   Created: 2017/01/28 19:30:35 by cfatrane          #+#    #+#             */
+/*   Updated: 2017/01/28 19:31:17 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_strnew_two(size_t x, size_t y)
+void	ft_list_merge(t_list **begin_list1, t_list *begin_list2)
 {
-	char	**tab;
-	char	*tableau2;
-	size_t	i;
-
-	i = 0;
-	tab = (char **)malloc(sizeof(char *) * y);
-	tableau2 = (char *)malloc(sizeof(char) * x * y);
-	while (i < y)
-	{
-		tab[i] = &tableau2[i * x];
-		i++;
-	}
-	return (tab);
+	if ((*begin_list1) == NULL)
+		*begin_list1 = begin_list2;
+	else if ((*begin_list1)->next == NULL)
+		(*begin_list1)->next = begin_list2;
+	else
+		ft_list_merge(&((*begin_list1)->next), begin_list2);
 }

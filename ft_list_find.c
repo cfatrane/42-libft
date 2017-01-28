@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew_two.c                                    :+:      :+:    :+:   */
+/*   ft_list_find.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/20 11:36:53 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/28 14:35:01 by cfatrane         ###   ########.fr       */
+/*   Created: 2017/01/28 19:23:40 by cfatrane          #+#    #+#             */
+/*   Updated: 2017/01/28 19:25:28 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_strnew_two(size_t x, size_t y)
+t_list	*ft_list_find(t_list *begin_list, void *content_ref, int (*cmp)())
 {
-	char	**tab;
-	char	*tableau2;
-	size_t	i;
-
-	i = 0;
-	tab = (char **)malloc(sizeof(char *) * y);
-	tableau2 = (char *)malloc(sizeof(char) * x * y);
-	while (i < y)
-	{
-		tab[i] = &tableau2[i * x];
-		i++;
-	}
-	return (tab);
+	if (begin_list == NULL)
+		return (NULL);
+	if ((*cmp)(begin_list->content, content_ref) == 0)
+		return (begin_list);
+	else if (begin_list->next)
+		return (ft_list_find(begin_list->next, content_ref, cmp));
+	else
+		return (NULL);
 }

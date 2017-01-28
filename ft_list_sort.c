@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew_two.c                                    :+:      :+:    :+:   */
+/*   ft_list_sort.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/20 11:36:53 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/28 14:35:01 by cfatrane         ###   ########.fr       */
+/*   Created: 2017/01/28 19:36:30 by cfatrane          #+#    #+#             */
+/*   Updated: 2017/01/28 19:36:32 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_strnew_two(size_t x, size_t y)
+t_list	*ft_list_sort(t_list* lst, int (*cmp)())
 {
-	char	**tab;
-	char	*tableau2;
-	size_t	i;
+	void	*tempo;
+	t_list	*parcour;
 
-	i = 0;
-	tab = (char **)malloc(sizeof(char *) * y);
-	tableau2 = (char *)malloc(sizeof(char) * x * y);
-	while (i < y)
+	parcour = lst;
+	while (lst->next)
 	{
-		tab[i] = &tableau2[i * x];
-		i++;
+		if (((*cmp)(lst->content, lst->next->content)) == 0)
+		{
+			tempo = lst->content;
+			lst->content = lst->next->content;
+			lst->next->content = tempo;
+			lst = parcour;
+		}
+		else
+			lst = lst->next;
 	}
-	return (tab);
+	lst = parcour;
+	return (lst);
 }
+

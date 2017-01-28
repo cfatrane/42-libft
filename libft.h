@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 10:45:03 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/27 20:24:46 by cfatrane         ###   ########.fr       */
+/*   Updated: 2017/01/28 19:37:17 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,13 @@ typedef struct		s_gnl
 	struct s_gnl	*next;
 	int				fd;
 }					t_gnl;
+
+typedef struct		s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}					t_list;
 
 void				*ft_memset(void *b, int c, size_t n);
 void				ft_bzero(void *s, size_t n);
@@ -109,20 +116,30 @@ int					ft_isupphexa(int c);
 int					ft_islowhexa(int c);
 int					ft_isalhexa(int c);
 
-typedef struct		s_list
-{
-	void			*content;
-	size_t			content_size;
-	struct s_list	*next;
-}					t_list;
-
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-size_t				ft_lstlen(t_list *list);
+t_list				*ft_create_elem(void *content);
+void				ft_list_push_back(t_list **begin_list, void *content);
+void				ft_list_push_front(t_list **begin_list, void *data);
+size_t				ft_list_size(t_list *begin_list);
+t_list				*ft_list_last(t_list *begin_list);
+t_list				*ft_list_push_params(int ac, char **av);
+void				ft_list_clear(t_list **begin_list);
+t_list				*ft_list_at(t_list *begin_list, unsigned int nbr);
+void				ft_list_reverse(t_list **begin_list);
+void				ft_list_foreach(t_list *begin_list, void (*f)(void *));
+void				ft_list_foreach_if(t_list *begin_list, void (*f)(void *),
+		void *content_ref, int (*cmp)());
+t_list				*ft_list_find(t_list *begin_list, void *data_ref,
+		int (*cmp)());
+void				ft_list_remove_if(t_list **begin_list, void *content_ref,
+		int (*cmp)());
+void				ft_list_merge(t_list **begin_list1, t_list *begin_list2);
+t_list				*ft_list_sort(t_list* lst, int (*cmp)());
 
 int					get_next_line(const int fd, char **line);
 
@@ -142,8 +159,8 @@ int					ft_max(int *tab, unsigned int len);
 size_t				ft_tabintlen(int *tab);
 
 int					*ft_tabnew(size_t size);
-int					**ft_tabnew_two(int x, int y);
-int					***ft_tabnew_three(int x, int y, int z);
+int					**ft_tabnew_two(size_t x, size_t y);
+int					***ft_tabnew_three(size_t x, size_t y, size_t z);
 
 int					ft_nbrlen(long long int nb);
 int					ft_nbrlen_binary(unsigned long long int nb);
@@ -151,9 +168,9 @@ int					ft_nbrlen_octal(unsigned long long int nb);
 int					ft_nbrlen_hexa(unsigned long long int nb);
 int					ft_nbrlen_uns(unsigned long long int nb);
 
+int					ft_nbrcmp(size_t nb1, size_t nb2);
 int					ft_nbcmp_min(int nb1, int nb2);
 int					ft_nbcmp_max(int nb1, int nb2);
-
 
 int					ft_size_tab_base(size_t n, int base);
 int					ft_count_words_sep(char const *s, char c);

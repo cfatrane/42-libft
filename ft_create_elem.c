@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlen.c                                        :+:      :+:    :+:   */
+/*   ft_create_elem.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/01 16:01:54 by cfatrane          #+#    #+#             */
-/*   Updated: 2016/12/02 13:40:59 by cfatrane         ###   ########.fr       */
+/*   Created: 2017/01/28 18:08:41 by cfatrane          #+#    #+#             */
+/*   Updated: 2017/01/28 18:17:11 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_lstlen(t_list *list)
+t_list	*ft_create_elem(void *content)
 {
-	if (list == NULL)
-		return (0);
-	return (ft_lstlen(list->next) + 1);
+	t_list	*list;
+
+	list = (t_list*)malloc(sizeof(*list));
+	list->content = content;
+	list->next = NULL;
+	return (list);
 }

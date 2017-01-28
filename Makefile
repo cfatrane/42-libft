@@ -6,7 +6,7 @@
 #    By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/29 16:05:24 by cfatrane          #+#    #+#              #
-#*   Updated: 2017/01/27 20:25:54 by cfatrane         ###   ########.fr       *#
+#*   Updated: 2017/01/28 19:41:36 by cfatrane         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -96,7 +96,22 @@ SRC_NAME =	ft_memset.c				\
 			ft_lstadd.c				\
 			ft_lstiter.c			\
 			ft_lstmap.c				\
-			ft_lstlen.c				\
+			ft_create_elem.c		\
+			ft_list_push_back.c		\
+			ft_list_push_front.c	\
+			ft_list_size.c			\
+			ft_list_last.c			\
+			ft_list_push_params.c	\
+			ft_list_clear.c			\
+			ft_list_at.c			\
+			ft_list_reverse.c		\
+			ft_list_foreach.c		\
+			ft_list_foreach_if.c	\
+			ft_list_find.c			\
+			ft_list_remove_if.c		\
+			ft_list_merge.c			\
+			ft_list_sort.c			\
+			ft_list_reverse_fun.c	\
 			get_next_line.c			\
 			ft_abs.c				\
 			ft_putwchar.c			\
@@ -120,6 +135,7 @@ SRC_NAME =	ft_memset.c				\
 			ft_nbrlen_octal.c		\
 			ft_nbrlen_hexa.c		\
 			ft_nbrlen_uns.c			\
+			ft_nbrcmp.c				\
 			ft_nbcmp_min.c			\
 			ft_nbcmp_max.c			\
 			ft_size_tab_base.c		\

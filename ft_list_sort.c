@@ -6,13 +6,13 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/28 19:36:30 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/28 19:36:32 by cfatrane         ###   ########.fr       */
+/*   Updated: 2017/01/31 19:03:04 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_list_sort(t_list* lst, int (*cmp)())
+t_list	*ft_list_sort(t_list *lst, int (*cmp)())
 {
 	void	*tempo;
 	t_list	*parcour;
@@ -33,4 +33,3 @@ t_list	*ft_list_sort(t_list* lst, int (*cmp)())
 	lst = parcour;
 	return (lst);
 }
-

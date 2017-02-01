@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/22 18:46:40 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/28 19:27:59 by cfatrane         ###   ########.fr       */
+/*   Updated: 2017/01/31 19:02:45 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_list_remove_if(t_list **begin_list, void *content_ref, int (*cmp)())
 		{
 			to_free = *begin_list;
 			*begin_list = (*begin_list)->next;
-			free (to_free);
+			free(to_free);
 			ft_list_remove_if(begin_list, content_ref, cmp);
 		}
 		else

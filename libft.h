@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 10:45:03 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/02/12 17:41:20 by cfatrane         ###   ########.fr       */
+/*   Updated: 2017/02/13 16:58:33 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -174,6 +174,8 @@ int					ft_nbrcmp(size_t nb1, size_t nb2);
 int					ft_nbcmp_min(int nb1, int nb2);
 int					ft_nbcmp_max(int nb1, int nb2);
 
+int					ft_iseven(int nb);
+int					ft_ismultiple(int nb, int mlt);
 int					ft_size_tab_base(size_t n, int base);
 int					ft_count_words_sep(char const *s, char c);
 size_t				ft_strlen_sep(char const *s, char c);

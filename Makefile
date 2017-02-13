@@ -6,7 +6,7 @@
 #    By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/29 16:05:24 by cfatrane          #+#    #+#              #
-#*   Updated: 2017/02/12 17:42:46 by cfatrane         ###   ########.fr       *#
+#*   Updated: 2017/02/13 16:58:40 by cfatrane         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -140,6 +140,8 @@ SRC_NAME =	ft_memset.c				\
 			ft_nbrcmp.c				\
 			ft_nbcmp_min.c			\
 			ft_nbcmp_max.c			\
+			ft_iseven.c				\
+			ft_ismultiple.c			\
 			ft_size_tab_base.c		\
 			ft_count_words_sep.c	\
 			ft_strlen_sep.c			\

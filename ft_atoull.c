@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
+/*   ft_atoull.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/16 11:24:12 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/02/17 11:40:12 by cfatrane         ###   ########.fr       */
+/*   Created: 2017/02/16 14:59:45 by cfatrane          #+#    #+#             */
+/*   Updated: 2017/02/16 18:10:03 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa_base(unsigned long long int n, char *base)
+unsigned long long	ft_atoull(const char *str)
 {
-	char				*str;
-	unsigned long long	i;
+	unsigned long long	nb;
+	unsigned long long	tmp;
 
-	i = ft_strlen(base);
-	if (!(str = (char *)malloc(sizeof(char) * 2)))
-		return (NULL);
-	if (n >= i)
-		str = ft_strjoin(ft_itoa_base(n / i, base), ft_itoa_base(n % i, base));
-	else if (n < i)
+	nb = 0;
+	tmp = 0;
+	while (ft_isspace((int)*str))
+		str++;
+	if (*str == '+')
+		str++;
+	while (ft_isdigit((int)*str))
 	{
-		str[0] = base[n];
-		str[1] = '\0';
+		tmp = tmp * 10 + *str - '0';
+		str++;
+		if (tmp < nb)
+			return (0);
+		nb = tmp;
 	}
-	return (str);
+	return (nb);
 }

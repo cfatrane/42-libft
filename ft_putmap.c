@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atou.c                                          :+:      :+:    :+:   */
+/*   ft_putmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/12 17:39:54 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/02/12 17:43:30 by cfatrane         ###   ########.fr       */
+/*   Created: 2017/02/15 17:57:18 by cfatrane          #+#    #+#             */
+/*   Updated: 2017/02/15 17:58:53 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned long long	ft_atou(const char *str)
+void	ft_putmap(char **map)
 {
-	unsigned long long	nb;
+	int	i;
 
-	nb = 0;
-	while (ft_isspace((int)*str))
-		str++;
-	if (*str == '+')
-		str++;
-	while (ft_isdigit((int)*str))
+	i = 0;
+	while (map[i])
 	{
-		nb = nb * 10 + *str - '0';
-		str++;
+		ft_putendl(map[i]);
+		i++;
 	}
-	return (nb);
 }

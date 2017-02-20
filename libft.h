@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 10:45:03 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/02/13 16:58:33 by cfatrane         ###   ########.fr       */
+/*   Updated: 2017/02/16 15:00:12 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_atoi(const char *str);
 long				ft_atol(const char *str);
 long long			ft_atoll(const char *str);
-unsigned long long	ft_atou(const char *str);
+unsigned long long	ft_atoull(const char *str);
 
 void				ft_putchar(char c);
 void				ft_putchar_fd(char c, int fd);
@@ -184,5 +184,6 @@ void				ft_swap(int *a, int *b);
 int					ft_sqrt(int nb);
 int					*ft_range(int min, int max);
 int					ft_hex_to_dec(char *hex);
+void				ft_putmap(char **map);
 
 #endif

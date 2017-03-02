@@ -6,7 +6,7 @@
 #    By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/29 16:05:24 by cfatrane          #+#    #+#              #
-#*   Updated: 2017/02/16 15:00:03 by cfatrane         ###   ########.fr       *#
+#*   Updated: 2017/03/02 13:54:03 by cfatrane         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ SRC_NAME =	ft_memset.c				\
 			ft_memcmp.c				\
 			ft_memalloc.c			\
 			ft_memdel.c				\
+			ft_realloc.c			\
 			ft_strlen.c				\
 			ft_strdup.c				\
 			ft_strndup.c			\
